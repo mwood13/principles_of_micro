@@ -36,7 +36,7 @@ We will begin by examining how decisions are made, what factors are important to
 
 ### Course Structure {-}
 
-This course will have in-person and asynchronous components. The in-person class, which will meet regularly during our university scheduled course time and days, is not independent from but complementary to the activities we will engage with on Canvas and the MyLab Economics platform associated with your course textbook. You will be expected to engage in both in-person and asynchronous activities and should prepare your schedule accordingly to attend class and meet deadlines.
+This course will have in-person and asynchronous components. The in-person class, which will meet regularly during our university scheduled course time and days, is not independent from but complementary to the activities we will engage with on Canvas and the Flatworld platform associated with the course textbook. You will be expected to engage in both in-person and asynchronous activities and should prepare your schedule accordingly to attend class and meet deadlines.
 
 It is assumed that all participants have access to the minimum technology requirements (see Course Policies: Course administration) and a basic working knowledge of Canvas and Microsoft Office (Word, Excel, Teams) or will acquire those skills prior to or concurrently with participating in the course. Training materials are available on your Canvas Course Homepage.
 

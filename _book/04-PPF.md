@@ -35,7 +35,7 @@ For your choice between studying economics and watching tv, your PPF would look 
 
 
 
-<img src="04-PPF_files/figure-html/PPF Individual-1.png" alt="" width="672" />
+![](04-PPF_files/figure-latex/PPF Individual-1.pdf)<!-- --> 
 
 
 For most firms and governments, the production possibility is **non-linear,** or slightly curved. This is because of something called specialization, which we will talk about more next class. For this example let us suppose that the city of Atlanta can produce either Chick-fil-A sandwiches of packs of Coca-Cola. Some of the possible production points are in the table below.
@@ -63,14 +63,14 @@ Table: Production Possibilities in Atlanta
 
 We can plot these points on a graph to visualize the production possibility frontier.
 
-<img src="04-PPF_files/figure-html/PPF ATL-1.png" alt="" width="672" />
+![](04-PPF_files/figure-latex/PPF ATL-1.pdf)<!-- --> 
 
 
 Depending on the combination of goods Atlanta wants to produce we can state if it is attainable, unattainable, efficient, or inefficient.
 
 A point of production is **attainable **if the combination of goods can be produced under current technological and resource constraints. A point is **unattainable **if it cannot be produced. A point is **inefficient**, if it can be improved, without having to give up anything. A point is **efficient **if it cannot be improved on. Move the point around on the graph below to see where it is attainable, unattainable, efficient, and inefficient.
 
-<img src="04-PPF_files/figure-html/unattainable-1.png" alt="" width="672" />
+![](04-PPF_files/figure-latex/unattainable-1.pdf)<!-- --> 
 
 
 Notice that when the point is above the PPF, it is unattainable. When it is below the PPF it is attainable, but it is inefficient.&nbsp; It is inefficient, because we could make more of either one or both of out product, without having to make less of the other. The production is only efficient and attainable when it is *on the PPF*. At this point we cannot make more of one product without reducing production of the other.
@@ -125,7 +125,7 @@ Notice the column "Midpoint of Sandwiches". Because the PPF is curved, the slope
 
 Midpoint Formula = (sum of two points)/2
 
-<img src="04-PPF_files/figure-html/nonlinear-1.png" alt="" width="672" />
+![](04-PPF_files/figure-latex/nonlinear-1.pdf)<!-- --> 
 
 ## Exercises 1
 
@@ -157,6 +157,6 @@ Sandwiches
 If we chose to produce 0.5 Chicken sandwiches, the marginal costs are the lowest and the marginal benefits are the highest. But remember Marginal is not total, it is only the amount for the very next unit. We want the lowest total costs and highest total benefits. The rule is that if marginal benefit is *greater* than marginal cost, then more production improves the efficiency. If the marginal benefit is* less* than marginal cost, then production should reduce to improve efficiency. The point where we do not want to increase or decrease production is when marginal benefit and marginal costs are **equal**. The point of allocative efficiency is 2.5 million chicken sandwiches because the marginal cost and marginal benefit are both 3.
 We can also graph the marginal costs and marginal benefit curves to help visualize the point of allocative efficiency. Graphically it is the point where the curves intersect.
 
-<img src="04-PPF_files/figure-html/allocaton-1.png" alt="" width="672" />
+![](04-PPF_files/figure-latex/allocaton-1.pdf)<!-- --> 
 
 ## Exercises 2

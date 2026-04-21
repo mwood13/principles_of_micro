@@ -34,7 +34,7 @@ Plotting each countries production possibility frontiers looks like this.
 
 
 
-<img src="05-demand_files/figure-html/indPPF-1.png" alt="" width="672" />
+![](05-demand_files/figure-latex/indPPF-1.pdf)<!-- --> 
 
 
 
@@ -57,7 +57,7 @@ Most countries of the world only export a select group of goods and services. Th
 
 Graphically, we can see their production points. China produces at point C1 while Indonesia produces at I1.
 
-<img src="05-demand_files/figure-html/specialize-1.png" alt="" width="672" />
+![](05-demand_files/figure-latex/specialize-1.pdf)<!-- --> 
 
 
 ### Trade
@@ -76,12 +76,12 @@ Indonesia will end with 0 + 5 = 5 tons of tea and 36 - 25 = 11 tons of rice.
 
 Plotting these points shows us more clearly how both countries end up better off from trade. The amounts of rice and tea for China after trade is seen at point C2, and for Indonesia at point I2.
 
-<img src="05-demand_files/figure-html/trade-1.png" alt="" width="672" />
+![](05-demand_files/figure-latex/trade-1.pdf)<!-- --> 
 
 
 By connecting the points before and after trade for each country, we get their trade line. The trade line shows us the different combinations that the countries could land at after trading different quantities.
 
-<img src="05-demand_files/figure-html/trade_lines-1.png" alt="" width="672" />
+![](05-demand_files/figure-latex/trade_lines-1.pdf)<!-- --> 
 
 
 ### Unattainable Individually but Efficient Globally

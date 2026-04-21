@@ -75,13 +75,25 @@ Economic research is done as a way to inform and critique policy. We make extens
 
 ### Why Study Economics? 
 
-Economics is more than just understanding money and the "economy". Economics is a toolset, a way of thinking, a way of approaching the world that is just a little bit different. Economics courses do so much more than teach you how to set a price for a product or how to interpret interest rates (although these are important). Economics teaches you to analyze all possibilities. It teaches you to think about the direct consequences of a decision as well as the indirect consequences. Economics teaches you to look beyond simple correlations in data, and to find the causes of relationship. Economics teaches you invaluable logic, reasoning, and critical thinking skill that can translate to all future careers as well as keep you marketable as an employee in a world surrounded by artificial intelligence. 
+Economics is more than just understanding money and the "economy". Economics is a tool-set, a way of thinking, a way of approaching the world that is just a little bit different. Economics courses do so much more than teach you how to set a price for a product or how to interpret interest rates (although these are important). Economics teaches you to analyze all possibilities. It teaches you to think about the direct consequences of a decision as well as the indirect consequences. Economics teaches you to look beyond simple correlations in data, and to find the causes of relationship. Economics teaches you invaluable logic, reasoning, and critical thinking skill that can translate to all future careers as well as keep you marketable as an employee in a world surrounded by artificial intelligence. 
 
 Students with economics majors can go into a wide variety of fields including government work, entrepreneurship, law, finance, consulting, and business analytics. Economics majors also have some of the highest salaries and career stability outside of engineering and medical degrees.
 
 As artificial intelligence becomes more prevalent, job security is becoming uncertain in many sectors. Some economics jobs will also be affected by this. However, in this class we will focus on the tools required to make you all better prepared for the AI job market. You will focus on understanding the reasoning and logic behind arguments. You will learn how to critique and review AI output. You will also learn about writing AI prompts to give better results. The combination of computer skills and judgement is what make economics majors still highly desirable even as the job market changes. 
 
 ## Exercises 1
+
+1. Which branch of economics would look at the effects of different degrees on wages? 
+
+2. Which branch of economics would look at the effects government spending on unemployment rates?
+
+3. What are some trade-offs of going to college?
+
+4. What is the largest trade-off of going to college?
+
+5. What are some trade-offs of taking a vacation to the beach?
+
+6. What is the largest trade-off of taking a vacation to the beach?
 
 ## Reading 2
 
