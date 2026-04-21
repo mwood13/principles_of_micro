@@ -249,7 +249,6 @@ by Dr. Micaela Wood.</p>" />
 <div id="course-overview" class="section level1 unnumbered hasAnchor">
 <h1>Course Overview<a href="index.html#course-overview" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Welcome to <strong>ECO 120: Principles of Microeconomics</strong>. This book contains the reading and in class exercises for this class. You are expected to complete the reading assignments before each class so that you are ready to ask questions and discuss the content. The exercises will be completed together in class.</p>
-<p>While I, Dr. Wood, wrote the text, examples, and problems, I cannot take full authorial credit for this work. Much of the material for the readings and exercises are inspired or taken from a variety of other texts including, Economics by Michael Parkin, Principles of Economics by Dirk Mateer and Lee Coppock, and Principles of Economics by John B. Taylor and Akila Weerapana.</p>
 
 </div>
             </section>
@@ -310,6 +309,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
