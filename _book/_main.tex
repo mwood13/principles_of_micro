@@ -1,0 +1,1504 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{book}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Principles of Microeconomics},
+  pdfauthor={Dr.~Micaela Wood},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Principles of Microeconomics}
+\author{Dr.~Micaela Wood}
+\date{2026-04-20}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Course Overview}\label{course-overview}
+\addcontentsline{toc}{chapter}{Course Overview}
+
+Welcome to \textbf{ECO 120: Principles of Microeconomics}. This book contains readings, interactive figures and tables, assignment details, and discussion questions for the course. You are expected to complete the reading assignments before each class so that you can engage and complete the discussions and other assignments.
+
+\chapter*{Syllabus}\label{syllabus}
+\addcontentsline{toc}{chapter}{Syllabus}
+
+\textbf{Principles of Microeconomics}
+
+\textbf{ECO 120 - 002}
+
+\textbf{Class Time:} Tuesdays and Thursdays, 2:15 - 3:45pm
+
+\textbf{Class Location:} Lupton 200
+
+\textbf{Instructor:} Dr.~Micaela Wood
+
+\textbf{Office Location:} Goodman 108
+
+\textbf{Office Hours:} Tuesdays and Thursdays, 11:30am - 1:0pm, or by appointment
+
+\textbf{Email:} \href{mailto:mwood1@oglethorpe.edu}{\nolinkurl{mwood1@oglethorpe.edu}}
+
+\section*{Course Description}\label{course-description}
+\addcontentsline{toc}{section}{Course Description}
+
+The objective of this course is to serve as an introduction to the basic principles of economics at the household, firm, and market level. The primary topics include rational behavior, scarcity and choice, specialization and trade, markets, and the role of government and its policies in those markets. We will address these subjects through problem solving, writing, and discussion. Simple graphical analysis and basic algebra will be used.
+
+So how does this course fit into my plan of study, you ask? Principles of Microeconomics may be the first course of its kind for many of you. For others, exposure to economics has likely been limited to short courses in high school or a college course in Principles of Macroeconomics. For some of you, this course is also not likely to be the last course you will take in economics. It is a prerequisite for many upper-level classes you plan to take whether majoring in economics, accounting, human resource management, international studies, or business administration.
+
+However, this is not the only valuable reason for enrolling and succeeding in Principles of Microeconomics. This course advances the fundamentals of business and individual economic decision-making. Each of us faces market decisions every day. It is valuable to go into negotiations in markets, as well as the voting booth, prepared with a clear understanding of the business strategies, government policies, and decision outcomes that will affect you.
+
+The course will unfold with several goals in mind. A student enrolled in Principles of Microeconomics will learn problem-solving techniques for dealing with simple economic problems. Students will gain knowledge of how to express themselves using economic terminology and graphical analysis. Specifically, a student will:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Understand the rational behavior principle and how it applies to decision-making.
+\item
+  Grasp how prices are determined and demonstrate this process.
+\item
+  Be aware of incentive structures embedded in different market structures and the resulting conduct of firms and consumers in response to those structures.
+\item
+  Comprehend the basic roles of government in markets.
+\end{enumerate}
+
+We will begin by examining how decisions are made, what factors are important to making good decisions, how choices relate to efficiency and social cooperation, and why individuals and business managers can benefit from understanding certain things about the markets in which they work. We will then explore the government's place in these private market interactions including price controls, regulation, and select public policies. We will also connect to the international markets as we investigate the role of specialization in trade.
+
+\subsection*{Course Structure}\label{course-structure}
+\addcontentsline{toc}{subsection}{Course Structure}
+
+This course will have in-person and asynchronous components. The in-person class, which will meet regularly during our university scheduled course time and days, is not independent from but complementary to the activities we will engage with on Canvas and the MyLab Economics platform associated with your course textbook. You will be expected to engage in both in-person and asynchronous activities and should prepare your schedule accordingly to attend class and meet deadlines.
+
+It is assumed that all participants have access to the minimum technology requirements (see Course Policies: Course administration) and a basic working knowledge of Canvas and Microsoft Office (Word, Excel, Teams) or will acquire those skills prior to or concurrently with participating in the course. Training materials are available on your Canvas Course Homepage.
+
+\section*{Textbook - Required}\label{textbook---required}
+\addcontentsline{toc}{section}{Textbook - Required}
+
+\emph{Principles of Economics} by Timothy Taylor and Antoinette Schoar‑Weerapana (FlatWorld)
+
+Additional readings, worksheets, and activities will be posted on Canvas.
+
+\section*{Assignments and Grading}\label{assignments-and-grading}
+\addcontentsline{toc}{section}{Assignments and Grading}
+
+\textbf{Grading Policy}
+
+\begin{itemize}
+\tightlist
+\item
+  Exams 45\%
+\item
+  Writing Assignments 10\%
+\item
+  Discussion Posts 10\%
+\item
+  Economic Reasoning Assignments 15\%
+\item
+  Online Homework 10\%
+\item
+  Participation 10\%
+\end{itemize}
+
+\subsection*{Exams 45\%}\label{exams-45}
+\addcontentsline{toc}{subsection}{Exams 45\%}
+
+Throughout the semester, there will be \textbf{three exams:} 2 midterms and 1 final. Each exam will be 15\% of your final grade. Each midterm will cover the material from the weeks prior. Exact chapters will be conveyed on Canvas and in class. The final exam will be partially cumulative.
+
+All midterms are in person, in the regular classroom, and at the regular time. The final exam follows the University's final exam schedule and will take place on \textbf{Date and Time} in our normal classroom.
+
+\textbf{Exam rules and policies:} Please bring your own pen or pencil and calculator to each exam. Make-up exams are only permitted for cases following the University's guidelines (illness or family death). You must let me know before the exam date if you will miss the exam for an excused reason and must complete your make-up exam within 7 days of the original date. Missing an exam for any other reason will result in your final exam replacing the missed exam at the end of the term. You will be permitted one half of a standard-sized sheet of notebook paper on all exams. You may write whatever you like on the notebook paper. No other forms of notes will be permitted during the exam.
+
+\subsection*{Writing Assignments 10\%}\label{writing-assignments-10}
+\addcontentsline{toc}{subsection}{Writing Assignments 10\%}
+
+Students will complete several short memos (approximately 500--750 words each) focused on economic writing, logical argumentation, and responsible AI use.
+Memos may ask students to:
+
+\begin{itemize}
+\tightlist
+\item
+  Explain an economic concept or policy in clear, non‑technical language
+\item
+  Evaluate an economic claim or argument
+\item
+  Compare a student‑written explanation to an AI‑generated one
+\item
+  Identify logical gaps, hidden assumptions, or omitted considerations in AI outputs
+\end{itemize}
+
+AI tools are allowed and sometimes required for these assignments; however, grades are based on the quality of the student's reasoning and writing, not the AI output itself. The lowest memo score will be dropped.
+
+\subsection*{Discussion Posts 10\%}\label{discussion-posts-10}
+\addcontentsline{toc}{subsection}{Discussion Posts 10\%}
+
+Each week there will be a discussion post about materials to read. You will be expected to post your first response before class on Tuesday. After class you will respond to three other students. Your responses should be thoughtful and connect the original post to the material in class, the reading, or your own experiences. Your responses are due by Sunday at 11:59pm. Your lowest discussion posts will be dropped at the end of the semester.
+
+\subsection*{Economic Reasoning Assignments 15\%}\label{economic-reasoning-assignments-15}
+\addcontentsline{toc}{subsection}{Economic Reasoning Assignments 15\%}
+
+At the end of class on Thursdays, I will share a more difficult practice problem. These problems will require you to reflect on the materials for the week. These problems consist of two parts: the initial attempt and the revision and reflection. The initial attempt will be 1/3 of the points. You will receive full points for submitting the attempt by Friday at Midnight.
+
+The second portion of the assignment is based on your reflection and revision of your initial attempt. After submitting your initial attempt, the solution to the problem will be made available. You will compare your attempt with the solution. Your score on the revision will be determined by the following criteria:
+
+\begin{itemize}
+\tightlist
+\item
+  Your ability to identify where you made mistakes or where your argument was inconsistent.
+\item
+  Explain why something was a mistake or inconsistent.
+\item
+  Explain how you determined the mistakes from above, or how you determined that you were correct/consistent.
+\item
+  State what tools or resources you used to help you determine your responses above.
+\item
+  Reflect on the process of the question, and what skills you want to try to strengthen for the next assignment.
+\end{itemize}
+
+The reflections will be due on the following Tuesday at Midnight. Your two lowest scores will be dropped.
+
+\subsection*{Online Homework 10\%}\label{online-homework-10}
+\addcontentsline{toc}{subsection}{Online Homework 10\%}
+
+All homework will be done using the FlatWorld Platform. This homework is aimed at helping you further your analytic and problem-solving skills. Homework will be based on completion. Because they are completion based, you may use any resources to aid in solving including but not limited to your notes, the textbook, office hours, your friends, and the internet (including AI). Regardless of the tools used to complete your homework, I encourage you to ensure that at the end of the assignment you understand how to solve each problem. Your lowest homework grade will be dropped at the end of the semester.
+
+\subsection*{Participation 10\%}\label{participation-10}
+\addcontentsline{toc}{subsection}{Participation 10\%}
+
+Participation is essential in a Socratic classroom. To earn full participation credit, students must meaningfully participate in at least 18 class meetings (75\%). Participation may include discussion, small‑group work, answering questions, or contributing predictions during class. Please know that attendance alone will not receive participation credit.
+
+\subsection*{Grading Scale}\label{grading-scale}
+\addcontentsline{toc}{subsection}{Grading Scale}
+
+I will employ the traditional Oglethorpe University grading scale as listed below. Pluses and minuses apply in Oglethorpe University policy.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Letter Grade & Percentage Range \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+A & 93--100\% \\
+A‑ & 90--92\% \\
+B+ & 87--89\% \\
+B & 83--86\% \\
+B‑ & 80--82\% \\
+C+ & 77--79\% \\
+C & 73--76\% \\
+C‑ & 70--72\% \\
+D+ & 67--69\% \\
+D & 60--66\% \\
+F & Below 60\% \\
+\end{longtable}
+
+\section*{Course Policies}\label{course-policies}
+\addcontentsline{toc}{section}{Course Policies}
+
+\subsection*{Civility Statement}\label{civility-statement}
+\addcontentsline{toc}{subsection}{Civility Statement}
+
+Oglethorpe University is a place dedicated to vigorous discussion, exchange of ideas and debate. Such discussion always runs the risk of becoming acrimonious; thus it is particularly important for all members of the Oglethorpe community to maintain a climate marked by mutual respect. We must be committed to the highest standards of civility and decency and to promoting a community where all people can work and learn together in an atmosphere free of demeaning behavior or hostility.
+
+The need to maintain civility and mutual respect extends throughout the different venues of debate and discussion --- from informal exchanges in the dining hall, the residence halls or the quad to formal discussions in classrooms, meetings, and social media.
+
+Students and faculty have a responsibility to foster a healthy climate for the exchange of ideas in the classroom and on campus. To that end, students and faculty should specifically avoid behavior that disrupts classroom activities or creates a hostile or intimidating atmosphere.
+
+It is my intent to create a learning environment that acknowledges and values diverse perspectives and experiences, and to select and create materials and activities in support of that goal. I welcome your feedback on this aspect of the course at any time, with any information that would make it more effective and inclusive for you.
+
+\subsection*{Honor Code}\label{honor-code}
+\addcontentsline{toc}{subsection}{Honor Code}
+
+All work assigned in this course will be governed by the policies set forth in the Honor Code as stated in the Oglethorpe University Bulletin. The Honor Code is our mutual pledge, by both student and faculty, to uphold a high standard of academic honesty. I assume and expect that each student in this course will fully abide by this code.
+
+\textbf{Academic Integrity and the Oglethorpe Honor Code}
+
+Our Oglethorpe community thrives on high standards of academic integrity. The Honor Code serves as a guiding document to develop our fundamental values of honesty, trust, fairness, respect, responsibility, and courage.
+
+By embracing these principles, everyone at Oglethorpe supports equitable access to academic success, as well as personal and professional growth. Oglethorpe welcomes all who accept and affirm these principles of academic integrity.\\
+Students sign the following affirmation at the start of their Oglethorpe career during Convocation.
+
+\begin{quote}
+``I affirm that I am acting with academic integrity.''
+
+(followed by the student's signature)
+\end{quote}
+
+Additionally, students are asked to sign this affirmation at least once in every course.
+
+By regularly signing this affirmation, students are reminded of the Oglethorpe community standards of academic integrity. We encourage students to maintain a commitment to integrity beyond their time at Oglethorpe.
+
+A longer description of the Honor Code at Oglethorpe is posted on our Canvas course page, including example citation methods for written assignments. The full text of the Honor Code can be found at \url{https://bulletin.oglethorpe.edu/11-honor-code/}. It contains the responsibilities we accept by becoming members of the community and the procedures we will follow should our commitment to academic integrity ever come into question. If you have any questions, please feel free to contact the Honor Council Director, Dr.~Anna Ziering at \href{mailto:aziering@Oglethorpe.edu}{\nolinkurl{aziering@Oglethorpe.edu}}.
+
+\subsection*{Academic Success}\label{academic-success}
+\addcontentsline{toc}{subsection}{Academic Success}
+
+If you are a student with a disability -- physical, medical, psychological, neurodivergent or learning-specific -- and have not connected with Accessibility Services to discuss your accessibility needs, contact Accessibility Services in the Academic Success Center, 404-364-8869, by email at \href{mailto:accessibility@oglethorpe.edu}{\nolinkurl{accessibility@oglethorpe.edu}} or at \url{https://success.oglethorpe.edu/accessibility-services/}. This is a great way to learn more about accommodations, helpful resources, and support, available through the Office of Accessibility Services. Students who register for accommodations during the semester should schedule a meeting with me after accommodations have been approved by the Office of Accessibility Services.
+
+\subsection*{Student mental Health and Wellbeing}\label{student-mental-health-and-wellbeing}
+\addcontentsline{toc}{subsection}{Student mental Health and Wellbeing}
+
+All students currently enrolled at Oglethorpe may use Counseling Center services at no cost. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, services are available. Please visit \url{https://counseling.oglethorpe.edu} for more details.
+
+\subsection*{AI Policy}\label{ai-policy}
+\addcontentsline{toc}{subsection}{AI Policy}
+
+AI technology is rapidly evolving and becoming more accessible to students. I cannot stop you from using AI, Chegg, Quizlet, and other platforms on your homework. However, you should remember that using such platforms to simply give you the answers to the homework impedes your ability to learn and understand the course content. It is much better to use such resources as a tool to assist in your learning of the materials so that you can show mastery of the subject during class and exams. Your future self will thank you.
+
+\chapter*{Course Schedule}\label{course-schedule}
+\addcontentsline{toc}{chapter}{Course Schedule}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0988}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4198}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1728}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3086}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Week
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Topic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Writing
+Assignments
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Exams and
+Important
+Dates
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Intro to Economics and Math & & \\
+2 & Opportunity Costs and PPFs & WA 1 & \\
+3 & Gains from Trade and
+Demand & & Labor Day
+No Class Monday 9/7 \\
+4 & Supply and Equilibrium & WA 2 & \\
+5 & Elasticity of Demand & & Exam 1
+Tuesday 9/22 \\
+6 & Other Elasticities and Economic
+Surplus & & \\
+7 & Taxes & WA 3 & \\
+8 & Price Controls & & s Fall Break No Class
+Monday or Tuesday
+10/12-13 \\
+9 & Externalities and Public Goods & WA 4 & \\
+10 & Costs and Production
+in the Short Run & & Exam 2
+Tuesday 10/27 \\
+11 & Long Run Costs and Perfect
+Competition in the Short Run & & \\
+12 & Perfect Competition in the
+Long Run & WA 5 & \\
+13 & Monopolies & & \\
+14 & Monopolistic Competition & & Thanksgiving Break
+No Class Wednesday-
+Friday 11/27-11/29 \\
+15 & Oligopoly and Strategy & WA 6 & \\
+16 & Finals Week & & Exam 3
+\textbf{Date} \\
+\end{longtable}
+
+\chapter{Intro to Economics}\label{intro-to-economics}
+
+\section{What is Economics?}\label{what-is-economics}
+
+What do you think of when you hear the word economics? Many people think of ``the economy'' and more specifically how the stock market is preforming and how expensive things are, but economics is so much more than this. Some definitions of economics are given below.
+
+\textbf{Definitions in dictionaries}
+
+\begin{itemize}
+\tightlist
+\item
+  Merriam-Webster Dictionary: ``A social science concerned chiefly with description and analysis of the production, distribution, and consumption of goods and services''
+\item
+  Oxford Learners Dictionary: ``The study of how a society organizes its money, trade, and industry''
+\item
+  Cambridge Dictionary: ``The way in which trade, industry, or money is organized, or the study of this''
+\end{itemize}
+
+\textbf{Definition from the American Economic Association}
+
+\begin{quote}
+It's the study of scarcity, the study of how people use resources and respond to incentives, or the study of decision-making
+\end{quote}
+
+A key difference in these definitions is the focus on decision making under scarcity and responses to incentives. \textbf{Scarcity} comes when we are unable to meet all out wants. Scarcity can come in the form of not having enough money to buy an item that you want, or it could be that you do not have enough time in the day to do all the activities you want. Because we face scarcity, we must decide how to allocate resources, energy, time, etc. People choose how to allocate scare items through incentives. \textbf{Incentives} are rewards that encourage a behavior or punishments that discourage a behavior. For example, if you have 2 hours of free time to either work on homework or hang out with your friends, you must choose which to do. You cannot spend 2 hours with your friends and 2 hours doing homework because you only have 2 hours of free time total. Right now you may choose to hang out with your friends because you enjoy spending time with your friends (large benefit), and there are not many assignments due in class yet (low costs). However, if you have a test tomorrow, then the cost of spending those two hours with your friends is much higher (cost is the loss of points on your test). In this case you may choose to allocate your scarce time differently because your incentives have changed.
+
+\subsection{Two Branches of Economics}\label{two-branches-of-economics}
+
+Economics can be broken down into two main branches of study.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Microeconomics} - the study of the choices that individuals and businesses make, the way these choices interact in markets, and the influence of governments.
+\item
+  \textbf{Macroeconomics} - the study of the performance of the national economy and the global economy.
+\end{enumerate}
+
+Some questions microeconomists study are:
+
+\begin{itemize}
+\tightlist
+\item
+  How does legalization of sports betting affect the rate of domestic disputes?
+\item
+  How do union contracts affect the retention of teachers and educational attainment of students?
+\item
+  How does accuracy of past hurricane forecasts affect rates of emergency supply purchases?
+\end{itemize}
+
+Some questions macroeconomists study are:
+
+\begin{itemize}
+\tightlist
+\item
+  How does access to banks and credit affect expenditure of developing nations?
+\item
+  How do trade agreements affect the division of the labor force along different demographic lines?
+\item
+  How did the historical development of infrastructure affect the employment and economic growth rates of different regions in a country?
+\end{itemize}
+
+\subsection{The Economic Way of Thinking}\label{the-economic-way-of-thinking}
+
+\textbf{1. A choice is a trade-off.}
+A \textbf{trade-off} is when you must give up one thing for another. This was discussed already when we talked about scarcity and allocating your time between doing homework and hanging out with your friends.
+
+\textbf{2. People make rational choices by comparing costs and benefits.}
+Economists believe that people purchase and do things because they believe that the benefits outweigh the costs. For example, if you like strawberry ice-cream and are allergic to peanuts, then if you go to an ice-cream store we can assume that you will not choose an ice-cream with peanuts but will get one with strawberries. Specifically, you get more benefit from a strawberry ice-cream than the cost of purchasing, but the cost of peanut ice-cream is very high and the benefit is extremely low. Since the benefits are higher than the costs for strawberry and not peanut then a rational consumer will only buy strawberry ice-cream.
+
+\textbf{3. Benefit is what you gain from something.}
+\textbf{Preferences} are how much you like or dislike something. If you prefer Coke to Pepsi, then the benefit you get from a can of Coke is greater than the benefit your get from a can of Pepsi. Preferences are personal, and just because you have a preference for Coke does not mean that someone cannot have a preference for Pepsi.
+
+\textbf{4. Cost is what you must give up for something.}
+Costs can be the amount of money you spend on something, but it does not have to be money. Suppose, when choosing your course schedule, you need to pick between two electives: environmental economics and international economics. If you choose to take environmental economics, then you must give up taking international economics. International economics is the cost of taking environmental economics. This type of cost is called an \textbf{opportunity cost}, the highest valued option that must be given up.
+
+\textbf{5. Most choices are ``how-much'' choices made on the margin.}
+Choices made on the \textbf{margin} are made by comparing a little more of something with its cost. If you are eating a pizza, you will choose how many slices to eat. Each slide will satiate a bit of your hunger. As you eat more and more slices, your hunger decreases along with the benefit of eating an additional slice. Once you are no longer hungry, you will stop eating pizza because the benefit of another slice is less than the cost of an upset stomach from eating too much.
+
+\textbf{6. Choices respond to incentives.}
+When discussing the choice to work on homework or hang our with friends, we mentioned that if you had a test, then the incentives were different, than the first week of the quarter. Because the incentives are different, your choice between hanging out with friends and doing homework will be different.
+
+\subsection{Economics as a Social Science and Policy Tool}\label{economics-as-a-social-science-and-policy-tool}
+
+Economic research is done as a way to inform and critique policy. We make extensive use of facts and data to show how things in the world are or how a policy is working, and from this information we can make suggestions for new policy. Statements that declare facts and can be tested in economics research are \textbf{positive statements} while statements about how the world should be are \textbf{normative statements}. While it is tempting to start research or arguments with normative statements because you are passionate about a specific policy or topic, you cannot support your research or position without positive statements.
+
+\section{Why Study Economics?}\label{why-study-economics}
+
+Economics is more than just understanding money and the ``economy''. Economics is a toolset, a way of thinking, a way of approaching the world that is just a little bit different. Economics courses do so much more than teach you how to set a price for a product or how to interpret interest rates (although these are important). Economics teaches you to analyze all possibilities. It teaches you to think about the direct consequences of a decision as well as the indirect consequences. Economics teaches you to look beyond simple correlations in data, and to find the causes of relationship. Economics teaches you invaluable logic, reasoning, and critical thinking skill that can translate to all future careers as well as keep you marketable as an employee in a world surrounded by artificial intelligence.
+
+Students with economics majors can go into a wide variety of fields including government work, entrepreneurship, law, finance, consulting, and business analytics. Economics majors also have some of the highest salaries and career stability outside of engineering and medical degrees.
+
+As artificial intelligence becomes more prevalent, job security is becoming uncertain in many sectors. Some economics jobs will also be affected by this. However, in this class we will focus on the tools required to make you all better prepared for the AI job market. You will focus on understanding the reasoning and logic behind arguments. You will learn how to critique and review AI output. You will also learn about writing AI prompts to give better results. The combination of computer skills and judgement is what make economics majors still highly desirable even as the job market changes.
+
+\section{Graphs and Models in Economics}\label{graphs-and-models-in-economics}
+
+\chapter{Opportunity Costs}\label{opportunity-costs}
+
+\section{Production Possibility Frontiers}\label{production-possibility-frontiers}
+
+Suppose you have 5 hours of free time tonight. You can choose to either study economics or watch tv. How many hours do you choose to spend watching tv? How many hours to you choose to spend studying economics? How might this choice change if it is a Saturday? What if you have an exam tomorrow? What if it is spring break
+
+All the different possible ways for you to split your 5 hours between studying and watching tv makes up your \textbf{production possibility frontier}.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2361}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2778}}@{}}
+\caption{Ways to Divide Time Between
+Watching TV and Studying}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Hours Studying
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Hours Watching TV
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Hours Studying
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Hours Watching TV
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 5 \\
+1 & 4 \\
+2 & 3 \\
+3 & 2 \\
+4 & 1 \\
+5 & 0 \\
+\end{longtable}
+
+In an economic sense, the \textbf{production possibility frontier (PPF)} is the boundary between those combinations of goods and services that can be produced given current technology, and those that cannot.
+
+For your choice between studying economics and watching tv, your PPF would look like this.
+
+\pandocbounded{\includegraphics[keepaspectratio]{04-PPF_files/figure-latex/PPF Individual-1.pdf}}
+
+For most firms and governments, the production possibility is \textbf{non-linear,} or slightly curved. This is because of something called specialization, which we will talk about more next class. For this example let us suppose that the city of Atlanta can produce either Chick-fil-A sandwiches of packs of Coca-Cola. Some of the possible production points are in the table below.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2917}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3056}}@{}}
+\caption{Production Possibilities in Atlanta}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Chicken Sandwiches
+(in Millions)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Packs of Coke
+(in Millions)
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Chicken Sandwiches
+(in Millions)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Packs of Coke
+(in Millions)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 15 \\
+1 & 14 \\
+2 & 12 \\
+3 & 9 \\
+4 & 5 \\
+5 & 0 \\
+\end{longtable}
+
+We can plot these points on a graph to visualize the production possibility frontier.
+
+\pandocbounded{\includegraphics[keepaspectratio]{04-PPF_files/figure-latex/PPF ATL-1.pdf}}
+
+Depending on the combination of goods Atlanta wants to produce we can state if it is attainable, unattainable, efficient, or inefficient.
+
+A point of production is \textbf{attainable }if the combination of goods can be produced under current technological and resource constraints. A point is \textbf{unattainable }if it cannot be produced. A point is \textbf{inefficient}, if it can be improved, without having to give up anything. A point is \textbf{efficient }if it cannot be improved on. Move the point around on the graph below to see where it is attainable, unattainable, efficient, and inefficient.
+
+\pandocbounded{\includegraphics[keepaspectratio]{04-PPF_files/figure-latex/unattainable-1.pdf}}
+
+Notice that when the point is above the PPF, it is unattainable. When it is below the PPF it is attainable, but it is inefficient.~ It is inefficient, because we could make more of either one or both of out product, without having to make less of the other. The production is only efficient and attainable when it is \emph{on the PPF}. At this point we cannot make more of one product without reducing production of the other.
+
+\section{Opportunity and Marginal Cost}\label{opportunity-and-marginal-cost}
+
+Suppose we currently only produce Coca-Cola in Atlanta and produced 15 million packs of Coke per year, what would we have to give up in order to produce chicken sandwiches? We would give up packs of Coke. The cost of coke given up divided by the benefit of chicken sandwiches gained, gives us our \textbf{opportunity cost}. The cost of coke given up to produce one more chicken sandwich is the \textbf{marginal cost}.
+
+In order to go from no chicken sandwich production to 1 million chicken sandwiches we must give up 1 million packs of Coke. So the opportunity (and marginal) cost is 1/1 = 1. The table below shows how to calculate the opportunity costs as we increase chicken sandwich production.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1728}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1728}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3210}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3333}}@{}}
+\caption{Opportunity Costs of Producing More Sandwiches}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Number of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Number of
+Cokes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Midpoint of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Opportunity
+Cost
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Number of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Number of
+Cokes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Midpoint of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Opportunity
+Cost
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 15 & & \\
+& & \(\frac{0+1}{2}\)
+\(= \frac{1}{2}\)
+\(= 0.5\) & \(\frac{1}{1} = 1\) \\
+1 & 14 & & \\
+& & \(\frac{1+2}{2}\)
+\(= \frac{3}{2}\)
+\(= 1.5\) & \(\frac{2}{1} = 2\) \\
+2 & 12 & & \\
+& & \(\frac{2+3}{2}\)
+\(= \frac{5}{2}\)
+\(= 2.5\) & \(\frac{3}{1} = 3\) \\
+3 & 9 & & \\
+& & \(\frac{3+4}{2}\)
+\(= \frac{7}{2}\)
+\(= 3.5\) & \(\frac{4}{1} = 4\) \\
+4 & 5 & & \\
+& & \(\frac{4+5}{2}\)
+\(= \frac{9}{2}\)
+\(= 4.5\) & \(\frac{5}{1} = 5\) \\
+5 & 0 & & \\
+\end{longtable}
+
+Notice the column ``Midpoint of Sandwiches''. Because the PPF is curved, the slope between 1 and 2 chicken sandwiches is not a straight line. This also means that the opportunity cost between these two points is not constant at 2 packs of coke, but rather is also moving. Instead, the opportunity cost that we calculated is the opportunity cost between 1 and 2 million chicken sandwiches. So we know that the opportunity cost halfway between 1 and 2 million sandwiches (the midpoint) is 2 packs of coke.
+
+Midpoint Formula = (sum of two points)/2
+
+\pandocbounded{\includegraphics[keepaspectratio]{04-PPF_files/figure-latex/nonlinear-1.pdf}}
+
+\subsection{Using Resources Efficiently}\label{using-resources-efficiently}
+
+Above we saw that we can produce at any point on our PPF and it is efficient. Specifically that point is \textbf{productively efficient}. However, we have not determined which of the infinite options on the PPF is the point we should actually choose to operate at. The optimal point is the one that most efficiently \emph{allocates our resources}. Specifically we are looking for the point of \textbf{allocative efficiency}: the point where goods and services are produced at the \emph{lowest possible cost} and in the quantities that provide the \emph{greatest possible benefit}. We found the cost of producing more chicken sandwiches in terms of packs of Coke in the table above. If we also know the additional benefit, or the amount of Coke's consumers are willing to give up in order to purchase more chicken sandwiches, we can determine the point of allocative efficiency.
+
+Suppose that the marginal benefits of a chicken sandwich (The amount of Coke consumers are willing to give up to receive one more sandwich) are what is in the table below.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2083}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2361}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2917}}@{}}
+\caption{Marginal Costs and Benefits of More
+Sandwiches}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Quantity of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Marginal Cost
+in Cokes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Marginal Benefit
+in Cokes
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Quantity of
+Sandwiches
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Marginal Cost
+in Cokes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Marginal Benefit
+in Cokes
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0.5 & 1 & 5 \\
+1.5 & 2 & 4 \\
+2.5 & 3 & 3 \\
+3.5 & 4 & 2 \\
+4.5 & 5 & 1 \\
+\end{longtable}
+
+If we chose to produce 0.5 Chicken sandwiches, the marginal costs are the lowest and the marginal benefits are the highest. But remember Marginal is not total, it is only the amount for the very next unit. We want the lowest total costs and highest total benefits. The rule is that if marginal benefit is \emph{greater} than marginal cost, then more production improves the efficiency. If the marginal benefit is* less* than marginal cost, then production should reduce to improve efficiency. The point where we do not want to increase or decrease production is when marginal benefit and marginal costs are \textbf{equal}. The point of allocative efficiency is 2.5 million chicken sandwiches because the marginal cost and marginal benefit are both 3.
+We can also graph the marginal costs and marginal benefit curves to help visualize the point of allocative efficiency. Graphically it is the point where the curves intersect.
+
+\pandocbounded{\includegraphics[keepaspectratio]{04-PPF_files/figure-latex/allocaton-1.pdf}}
+
+\chapter{Gains from Trade and Demand}\label{gains-from-trade-and-demand}
+
+\section{Gains from Trade}\label{gains-from-trade}
+
+Countries that trade with other countries are called \textbf{open economies} while countries that choose not to trade with others are \textbf{closed economies}. In Week 7 we will discuss international trade in detail, discussing tariffs, quotas, and other protectionist policies. Some of the arguments for protectionism (policies to reduce imports) are that it allows domestic firms to increase sales through weakened outside competition. However, this also leads to increased prices. In today's reading we will discuss the theory of going from a closed economy to an open economy and how it affects the global production possibility frontier.
+
+\subsection{Production Advantages}\label{production-advantages}
+
+Let us look at the countries of China and Indonesia. Both countries are large producers of rice and tea. Currently China is the 2nd largest producer of rice and the largest producer of tea. Indonesia is the world's 4th largest producer of rice and 7th largest producer of tea. Let us assume that their production possibilities are as given below:
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2083}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2083}}@{}}
+\caption{Production
+possibilities for China.}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Rice in tons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Tea in tons
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Rice in tons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Tea in tons
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 25.5 \\
+51 & 0 \\
+\end{longtable}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2083}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2083}}@{}}
+\caption{Production
+possibilities for Indonesia}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Rice in tons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Tea in Tons
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Rice in tons
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Tea in Tons
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 4 \\
+36 & 0 \\
+\end{longtable}
+
+Plotting each countries production possibility frontiers looks like this.
+
+\pandocbounded{\includegraphics[keepaspectratio]{05-demand_files/figure-latex/indPPF-1.pdf}}
+
+We can quickly see that if both countries were to only produce rice, that China would produce more than Indonesia. This means that China has an \textbf{absolute advantage} in rice production. Similarly, China has the absolute advantage in tea production, because if both countries put all of their resources into tea, China would produce more?
+
+So why would China be interested in trading with Indonesia, if they are better at producing both goods? Because of \textbf{opportunity cost}.
+
+A country, person, or business has the \textbf{comparative advantage} in producing a good or service if they are able to produce it at the lowest opportunity cost.
+
+\textbf{What is the opportunity cost of growing rice?}
+
+In order for China to grow rice, it must not grow any tea. Their opportunity cost is \(\frac{25.5}{51} = 0.5\). China must give up 0.5 tons of tea in order to grow 1 ton of rice. Similarly, Indonesia's opportunity cost is \(\frac{4}{39} \approx 0.11\). Because Indonesia's opportunity cost of growing rice is less than China's, Indonesia has the comparative advantage.
+
+\textbf{What is the opportunity cost of growing tea?}
+
+In order for China to grow tea, they must give up growing rice. China's opportunity cost of growing tea is \(\frac{51}{25.5} = 2\). Indonesia's opportunity cost is \(\frac{36}{4} = 9\). So, China has the lowest opportunity cost and the comparative advantage in tea production.
+
+\subsection{Specialization}\label{specialization}
+
+Most countries of the world only export a select group of goods and services. They choose the goods and services for which they have the comparative advantage. The act of only producing those goods and services for which a country or firm has the comparative advantage is called \textbf{specialization}. In our scenario China should specialize in tea. This means China makes 25.5 tons of tea and 0 tons of rice. Indonesia should specialize in rice making 0 tons of tea and 36 tons of rice.
+
+Graphically, we can see their production points. China produces at point C1 while Indonesia produces at I1.
+
+\pandocbounded{\includegraphics[keepaspectratio]{05-demand_files/figure-latex/specialize-1.pdf}}
+
+\subsection{Trade}\label{trade}
+
+Once countries have specialized, they trade with countries that have other specialties.
+
+Because China must give up 0.5 a ton of tea to grow rice, they are willing to purchase rice from others if the price is less than 0.5 tons of tea. If the price is higher then they will just produce it themselves.
+
+Similarly, Indonesia's opportunity cost of growing rice is 0.11. If they can sell for a price greater than this the will.
+
+This disparity in opportunity costs is what makes trade advantageous for both countries even though China has the absolute advantage in production.
+Suppose that China agrees to purchase 25 tons of rice from Indonesia at a price of 0.2 tons of tea per ton of rice. This means that China will give Indonesia 5 tons of tea.
+
+China will end with 25.5 - 5 = 20.5 tons of tea and 0 + 25 = 25 tons of rice.
+
+Indonesia will end with 0 + 5 = 5 tons of tea and 36 - 25 = 11 tons of rice.
+
+Plotting these points shows us more clearly how both countries end up better off from trade. The amounts of rice and tea for China after trade is seen at point C2, and for Indonesia at point I2.
+
+\pandocbounded{\includegraphics[keepaspectratio]{05-demand_files/figure-latex/trade-1.pdf}}
+
+By connecting the points before and after trade for each country, we get their trade line. The trade line shows us the different combinations that the countries could land at after trading different quantities.
+
+\pandocbounded{\includegraphics[keepaspectratio]{05-demand_files/figure-latex/trade_lines-1.pdf}}
+
+\subsection{Unattainable Individually but Efficient Globally}\label{unattainable-individually-but-efficient-globally}
+
+Through trade, China and Indonesia are able to reach points beyond their PPF's. Alone these points would be unattainable. Through trade, the combined production of all countries allows us to reach efficient production on the economic (or global) PPF.
+
+\section{Economic Growth}\label{economic-growth}
+
+When a country is able to reach points that were once unattainable without trade, that country has experienced \textbf{economic growth}. Economic growth can occur through technological change or capital accumulation. Economic growth does not remove the problem of scarcity, but it does allow us to make more efficient use of our resources. Examples of \textbf{technological change} include the advent of AI, GPS tracking in tractors, and the assembly line. \textbf{Capital accumulation} is the growth of capital resources including human skills and knowledge. Because Isaac Newton helped build the rules of Calculus, modern mathematicians do not have to re-discover calculus. Rather they can build on it and make new discoveries.
+
+To help you visualize economic growth, there are two interactive graphs below.
+
+This graph shows how the PPF changes if a technological change only affects one good or service.
+
+\section{Markets}\label{markets}
+
+What is a market? In economics we define a \textbf{market} as any arrangement that enables buyers and sellers to get information and do business with one another. We use this broad definition because it encompasses the many different types of markets in our society.
+
+Some markets have many buyers and sellers in person doing business, like a farmers market. Other markets have many buyers physically present, but there are not individual sellers, like a grocery store. And others are completely online with buyers and sellers never having to interact with one another, like Amazon.
+
+Markets vary in the nature of competition that buyers and sellers face. Some markets are dominated by only a few firms, while others have so many firms that it is hard for any one seller to stand out. A market where there are so many buyers and sellers so that no individual buyer or seller can influence the price is a competitive market. We will start our analysis of markets by analyzing competitive markets. Later in the semester, we will discuss other types of markets.
+
+\section{Demand}\label{demand}
+
+The definition of market was a place for buyers and sellers to go to obtain information and do business. One of the key items of information for sellers to give to potential buyers is a \textbf{price}. What is price? You may think that it is the amount of \emph{money} you must pay for something. We call this the \textbf{money price}. However, price does not have to be money. you could trade a good or service in exchange for something, or barter. It is best to thing of \textbf{price }as what you must give up in order to obtain something, or the opportunity cost. For example, if you spend \$10 pizza, then you cannot spend that \$10 on sushi. So not only are you giving up \$10 to buy a pizza, you are also giving up however much sushi you could by with \$10. When we think of price as how much of one good we much give up in order to receive another we call this the \textbf{relative price}. Suppose that it is \$5 sushi Wednesday at Publix. Then by purchasing pizza for lunch you give up 2 sushi rolls. The relative price of 1 pizza is 2 sushi rolls. The money price of pizza is \$10.
+
+\section{Demand}\label{demand-1}
+
+Buyers, or consumers, demand something when they
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Want it
+\item
+  Can Afford it
+\item
+  Plan to Buy it
+\end{enumerate}
+
+The \textbf{quantity demanded} of a good of services is the amount that consumers plan to purchase during a given time and at a given price. For example, saying that I demand 4 Red Bulls does not mean much. You do not know how much I am willing to pay or if I want them all today or throughout an entire year. If I say, at the price of \$3.50 I will purchase 1 Red Bull a week or 4 Red Bulls a month, that tells you useful information.
+
+Now if the price of a Red Bull increases to \$5.00, what would you expect to happen? I would likely purchase Red Bull's less often. Now I may only purchase a Red Bull every other week or 2 per month. My quantity demanded of Red Bulls decreased from 4 to 2 per month because the price increased from \$3.50 to \$5.00. This is the principle of the law of demand.
+
+\textbf{The Law of Demand}
+
+\begin{quote}
+``Other things remaining the same, the higher the price of a good, the smaller is the quantity demanded.''
+\end{quote}
+
+Why do we say ``other things remaining the same'' (in Latin, \textbf{ceteris paribus})? If the quality of Red Bull went down at the same time that the price went up, then you would not know if my change in purchasing was due to the quality or the price. Both would likely make me want fewer Red Bulls. Because of this, we must assume that when the price of Red Bull, or any item, changes that is the only thing happening.
+
+\subsection{Demand Schedules and Demand Curves}\label{demand-schedules-and-demand-curves}
+
+If we observe the quantity demanded by consumers over many different prices we can put them in a table called a \textbf{demand schedule}. Suppose my demand schedule for Red Bulls is represented in the following table.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2778}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3194}}@{}}
+\caption{Dr.~Wood's Demand for Red Bull}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price of a 12oz.
+Red Bull
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity I purchase
+in one month
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price of a 12oz.
+Red Bull
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity I purchase
+in one month
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\$0.50 & 8 \\
+\$2.00 & 6 \\
+\$3.50 & 4 \\
+\$5.00 & 2 \\
+\$6.50 & 0 \\
+\end{longtable}
+
+The entire relationship between the price and quantity demanded is called \textbf{demand}. If we plot the points from my demand schedule and then connect them, we will get a graphical representation of my demand, called a \textbf{demand curve}. When plotting economic variables, we always put price on the y-axis of the graph and quantity on the x-axis.
+
+Once we have graphed the demand curve, we can easily see how the law of demand holds through the negative slope of the curve. We can also easily see how the \textbf{quantity demanded will change} when the price changes.
+
+In the graph below move the point around to see how the quantity demand changes as the price changes.
+
+\subsection{Changes in Demand}\label{changes-in-demand}
+
+When things other than the price, affects a good or service it cause the demand, or entire relationship, to change. Above I mentioned the quality of Red Bull declining. If the price of Red Bull stayed at \$3.50, but the quality declined, most people would still choose to purchase fewer Red Bulls. This is a \textbf{change in demand}. To help you visualize a change in the demand, move the point on the graph below.
+
+We group things that can change demand into 6 broad categories.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Changes in the prices of related goods
+\end{enumerate}
+
+There are two types of related goods. The first is a \textbf{substitute}, or goods that can be used in place of one another. Let us think about the market for soy milk. If the price of oat milk (another non-dairy alternative) increases, the law of demand tells us that the quantity demanded of oat milk with decrease. People however do not stop drinking milk altogether, rather people who usually purchase oat milk may switch to purchasing soy milk. The price of soy milk however has not changed, but people are purchasing (demanding) more of it. The increase in the price of oat milk caused an increase in the demand for soy milk.
+
+On the other hand, if oat milk had a decrease in price, then people who normally drink soy milk may begin to purchase oat milk. Here the decrease in the price of oat milk decreases the demand for soy milk.
+
+Another type of related goods are complements. \textbf{Complements }are goods that are usually purchased and consumed together, like peanut butter and jelly. Let us thing about the market for peanut butter. If the price of jelly increases, the law of demand lets us know that the quantity demanded of jelly will decrease. If people are not buying jelly, then they are also not buying peanut butter even though its price has not changed. So, the increase in the price of jelly decreased the demand for peanut butter.
+
+Likewise if the price of jelly decreases, the demand for peanut butter will increase.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Expected Future Prices
+\end{enumerate}
+
+If the price of a good is expected to increase in the future, demand for the good will be higher today. If the future price is expected to be lower, the the demand today will decrease.
+
+Suppose you want to purchase a Nintendo Switch 2, and it is early November. Since many stores and websites have large Black Friday sales, you assume the Switch 2 may have a lower price if you wait to purchase it. Everyone else who is interested in a new switch also thinks this way. The price today has not changed, but no one wants to purchase a switch today. The demand for Switch 2's today is decreased, because people believe that the price may be lower if they wait.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Income
+\end{enumerate}
+
+You likely have thought about the future at some point and dreamed about all the things that you can buy and do once you graduate college and have a job making more money. You may also have dreamed about the things that you won't have to do or buy once you have a job.
+
+A \textbf{normal good} is a good that people purchase more of as their income increases. These are the things you look forward to doing more of. For example, when you get a job you may begin to eat out at nice restaurants more. Your increase in income increases your demand for nice restaurants.
+
+An \textbf{inferior good} is a good that people consume less of as their income increases. For many people (though not all) instant ramen is an inferior good. People eat it in college because it is cheap and filling. However, once they graduate and have a nice job most people stop purchasing instant ramen.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Expected Future Income
+\end{enumerate}
+
+If you expect to have increase in funds in the near future, you may demand more things today. For example, if you have a family member who always gives you \$50 on your birthday, then you may go ahead and buy something nice for yourself before your birthday, because you expect to get the \$50 eventually.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  Population
+\end{enumerate}
+
+As the population of an area increases, the demand for virtually everything also increases. For example, in 2000 there were 3.5 million people living in the metro Atlanta area. Now there are 6.2 million people in the area. Even if prices did not change during that time, we would still demand more of everything because the population has almost doubled.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{5}
+\tightlist
+\item
+  Preferences
+\end{enumerate}
+
+The individual tastes and preferences that people have for goods affects their demand. If people begin to prefer an item more, then their demand for it will increase. On the other hand, if they begin to prefer an item less, their demand will increase. An example of this can be seen in the meat industry. More people have begun to eat vegetarian and vegan in the last decade. As a result, the demand for meat has declined, while the demand for plant based protein products has increased.
+
+\chapter{Supply and Equilibrium}\label{supply-and-equilibrium}
+
+\section{Supply}\label{supply}
+
+Firms \textbf{supply} goods and services when they\ldots{}
+
+\begin{itemize}
+\tightlist
+\item
+  Have the resources and technology to produce them
+\item
+  Can profit from producing them
+\item
+  Plan to produce and sell them
+\end{itemize}
+
+The amount of a good or service that a firm plans to sell during a given period of time at a particular price is the \textbf{quantity supplied}.
+
+\textbf{The Law of Supply}
+
+\begin{quote}
+``Other things remaining the same, the higher the price of a good, the greater is the quantity supplied.''
+\end{quote}
+
+If a price is low, then firms will have a hard time covering the costs of production, so they will want to sell less, decrease the quantity Supplied. If the price is high, then it is easier for firms to cover their costs and make a profit, so they will increase the quantity supplied.
+
+\subsection{Supply Schedule and Curve}\label{supply-schedule-and-curve}
+
+The supply schedule is a table representing how much quantity a firm is willing to supply at different prices. The entire relationship is what we call \textbf{supply}. Suppose the supply for a tomato farm is represented by the following schedule.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.1806}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3194}}@{}}
+\caption{Supply of Tomatoes}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price per
+point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity supplied
+(pounds per month)
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price per
+point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity supplied
+(pounds per month)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\$0.25 & 0 \\
+\$0.75 & 20 \\
+\$1.25 & 40 \\
+\$1.75 & 60 \\
+\$2l25 & 80 \\
+\end{longtable}
+
+Plotting this relationship fives us the \textbf{supply curve}.
+
+We can see on the supply curve that an increase in price moves us to a new point on the supply curve. We call this a change in \textbf{quantity supplied}. Move to point below to see this in action.
+
+\subsection{Changes in Supply}\label{changes-in-supply}
+
+Just like with demand, if something other than the price affects the quantity of a good or service a firm wants to supply it moves then entire supply curve. We call this a \textbf{change in supply}. Interact with the graph below to see changes is supply.
+
+There are six broad categories of things that can change supply.
+
+\textbf{1. The prices of factors of production}
+
+If the factors of production needed to make a good or service increase in price, then it is more expensive to make the good. The price of the good or service has not changes, but because it is not more expensive to produce firms will choose to make less. The increase in the price of inputs (factors of production) decrease the supply. If the factors of production became cheaper, then supply would increase.
+
+\textbf{2. The price of related goods produced.}
+
+There are also complements and substitutes in production. \textbf{Production substitutes} occur when two different items can be made with the same factors of production. Our tomato farm above could choose to use the same land to grow a different crop, say summer squash. If the price of summer squash increases, farmers will prefer to grow more squash. This will reduce the supply of tomatoes.
+
+\textbf{Complements of production} are when a good is made through the process of producing another good. A common example is animal feed from corn or wheat. When corn is processed for humans some parts are not approved, or there are pieces that get cut off. These parts are then used for cattle feed. If the price of cattle feed increases, then the supply of corn for humans will increase
+
+\textbf{3. Expected Future Prices}
+
+Firms want to sell their goods and services at the highest possible price. If a firm expects the price in the near future to increase, they will hold onto inventory reducing today's supply. If thy thing that prices will go down in the future, then they will offload inventory today, increasing the supply.
+
+\textbf{4. The Number of Suppliers}
+
+If there are many firms in a market, then the supply increases. If firms choose to leave the industry, then the supply decreases.
+
+\textbf{5. Technology}
+
+As technology advances, firms are able to produce more goods and services using the same amount of resources. So an increase in technology will also increase the supply.
+
+\textbf{6. The State of Nature}
+
+The state of nature includes weather, climate change, and other environmental conditions. If there is a year of good rainfall, crops produce more so the supply of crops increases. If there is a year of drought, crop production will be lower and so will the supply.
+
+\section{Market Equilibirum}\label{market-equilibirum}
+
+Recall that a market is a place for buyers and sellers (demanders and suppliers) to do business.
+
+Markets are controlled by prices. If a price is high, then the quantity supplied by firms will be large, while the quantity demanded by buyers will be small. On the other hand if a price is low, the the quantity supplies by firms will be low, while the quantity demanded by buyers will be high. If the price is set so that the quantity supplied equals the quantity demanded, then we have an \textbf{equilibrium price}. The quantity the is demanded and supplied, is the \textbf{equilibrium quantity}.
+
+The table below gives the demand and supply schedules for a Sasha's sourdough stall at a farmers market. The price is price per loaf and quantity is loaves sold per hour.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1528}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1667}}@{}}
+\caption{Market for Sasha's
+Sourdough}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity
+Demanded
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity
+Supplied
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Price
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity
+Demanded
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Quantity
+Supplied
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 10 & 0 \\
+1 & 9 & 1 \\
+2 & 8 & 2 \\
+3 & 7 & 3 \\
+4 & 6 & 4 \\
+5 & 5 & 5 \\
+6 & 4 & 6 \\
+7 & 3 & 7 \\
+8 & 2 & 8 \\
+9 & 1 & 9 \\
+10 & 0 & 10 \\
+\end{longtable}
+
+If Sasha sets a the price at \$8, she will supply 8 loaves of sourdough. However, at a price of \$8, the quantity demanded is only 2. Because the quantity supplied is greater than the quantity demanded, there is a \textbf{surplus}. The surplus is 8-2=6 loaves.
+
+If instead, Sasha sets the price at \$3, she will supply 3 loaves of Sourdough. But, at this price the quantity demanded is 7. Since the quantity supplied is less than the quantity demanded, there is a \textbf{shortage}. The shortage is 7-3 = 4 loaves.
+
+The equilibrium price is the one that sets the quantity demanded equal to the quantity supplied. On the table, we can see that the quantity supplied and the quantity demanded are both 5 when Sasha sets a price of \$5 per loaf. \$5 is the equilibrium price and 5 loaves is the equilibrium quantity.
+
+The graph below allows you to visualize the market for Sasha's Sourdough by changing the price.
+
+\section{Changes in Market Equilibrium}\label{changes-in-market-equilibrium}
+
+Because equilibrium is determined by quantity demanded and quantity supplied, if something shift either of the curves, there will be a resulting change in equilibrium price and quantity.
+
+The graph below shows how the equilibrium price and quantity for Sasha's Sourdough is something causes the demand to change.
+
+Interact with this graph to see how a change in supply affects the market equilibrium.
+
+Interact with this graph to see how changing both curves affects the market equilibrium.
+
+\chapter{Elasticity}\label{elasticity}
+
+\section{Elasticity of Demand}\label{elasticity-of-demand}
+
+Sometimes we want to know how responsive consumers are to changes in price. We know from the law of demand that if the price of a good increases the quantity demanded will decrease, but by how much? You might think that we can look at the slope of the demand curve. If the curve is steep then the quantity does not change much, and if the slope is flat then then quantity changes a lot. However, the slope of the demand curve depends of the units we use to measure price and quantity. A demand curve in US dollars will have a different slope than if we use Mexican pesos. The graph below shows the quantity demanded for a good in different prices. The prices in dollars and pesos are equivalent, but it is easy to see that the slopes are different.
+
+To avoid the issue of units changing the slope, economists use a measure of responsiveness called elasticity.
+
+\section{The Price Elasticity of Demand}\label{the-price-elasticity-of-demand}
+
+The \textbf{price elasticity of demand} is a units-free measure of the responsiveness of the quantity demanded of a good or service to a change in its price. The formula for price elasticity of demand is
+
+\begin{align*}
+E_D &= \frac{\% \Delta Q_D}{\% \Delta P}
+\end{align*}
+
+This formula says that the price elasticity of demand equals the percentage change in quantity demanded divided by the percentage change in price.~
+Using the graph above, we will analyze the slope and price elasticity of demand for the good in both pesos and dollars.
+
+\textbf{US Dollars}
+
+First let us pick two points. At \$15 the demand is 0 units, and at \$10, the demand is 5.
+
+The slope is \(\frac{\Delta P}{\Delta Q_D} = \frac{10 - 15}{5 - 0} = \frac{-5}{5} = -1\).
+
+The price elasticity of demand is
+
+\begin{align*}
+E_D &= \frac{Q_2 - Q_1}{Q_{mid}}\div \frac{P_2 - P_1}{P_{mid}}\\
+E_D &= \frac{5 - 0}{(5+0)/2} \div \frac{10 - 15}{(10+15)/2}\\
+E_D &= \frac{5}{2.5}\div \frac{-5}{12.5}\\
+E_D &= 2 \div -0.4 = -5 
+\end{align*}
+
+\textbf{Mexican Pesos}
+
+Using the same two point in pesos we have that at 270 pesos the quantity demanded is 0, and at 180 pesos the quantity demanded is 5.
+
+The slope is \(\frac{180-270}{5-0} = \frac{-90}{5} = -18\). This slope is much larger than the slope from the US demand. If we used slope, we might think that the peso makes people more responsive to changes in price, but that does not make sense. Now let us compare the elasticities
+
+\begin{align*}
+E_D &= \frac{5-0}{(5+0)/2)} \div \frac{180 - 270}{(180+270)/2}\\
+E_D &= \frac{5}{2.5}\div \frac{-90}{225}\\
+E_D &= 2 \div -0.4 = -5
+\end{align*}
+
+Even though their slopes are different, their elasticities are the same.
+
+\section{Elastic vs.~Inelastic Demand}\label{elastic-vs.-inelastic-demand}
+
+We have found that the price elasticity of demand between the price of \$15 and \$10 is -5, but what does this mean. First notice that the elasticity of demand is negative, just like the slope. This is because quantity demanded will always decrease in response to an increase in price. To make thing easy economists often ignore the negative sign, and just talk about the number, or take the absolute value. The price elasticity of demand can range from 0 to infinity in absolute value. The larger the number, the more \textbf{elastic} the demand for the good is. This means that is the percentage change in quantity is larger than the percentage change in price. If the number is less than 1, then we say that the demand is \textbf{inelastic}. At this point, the percentage change in quantity is smaller than the percentage change in price. If the percentage change in quantity is the same as the percentage change in price then the elasticity is 1 and we call this \textbf{unit elastic}.
+
+There are two extreme cases of elasticity. First is when consumers do not respond to any change in price. This is called \textbf{perfectly inelastic} and has a perfectly vertical demand curve (pictured below). A common example of good with perfectly inelastic demand are life-saving medications. No matter what price people must pay, they will buy the medicine because the other option is death.
+
+The other extreme case occurs when consumers stop buying a product if price increases at all. This is called perfectly elastic and occurs when the demand is perfectly horizontal (pictured below). A common example for a good with a near horizontal demand are staple crops such as wheat or rice.
+
+\subsection{Elasticity along the demand curve}\label{elasticity-along-the-demand-curve}
+
+For most demand curves that are downwards sloping, the price elasticity of demand is elastic when the price is high and gets more inelastic as price lowers. Move the points below to see how the price elasticity of demand changes as you move along the demand curve.
+
+The table below summarizes the different types of price elasticity of demand.
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2778}}
+  >{\centering\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}@{}}
+\caption{Price Elasticity of Demand}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Numerical
+Range
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Elasticity
+Type
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Numerical
+Range
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Elasticity
+Type
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(E_D = \infty\) & Perfectly Elastic \\
+\(1<E_D<\infty\) & Elastic \\
+\(E_D = 1\) & Unit Elastic \\
+\(0<E_D<1\) & Inelastic \\
+\(E_D = 0\) & Perfectly Inelastic \\
+\end{longtable}
+
+\subsection{The Factors that Influence the Elasticity of Demand}\label{the-factors-that-influence-the-elasticity-of-demand}
+
+\textbf{1. The closeness of substitutes}
+
+Gasoline used for cars does not have substitutes. Gas powered cars need gas or they cannot operate. If the price of gasoline increases, the people with gas powered cars still need to drive places, so their demand for gasoline does not change much. Demand for gasoline is relatively inelastic.
+
+Gas stations are all over town under many brands, Costco, shell, bp, racetrac, and more. If you normally go to a bp station for gasoline and they increase their price, you can always go to a different gas station. While gas as a category is inelastic, demand for gas stations is elastic.
+
+\textbf{2. The proportion of income spent on the good}
+
+Cheap items, like a soda or piece of fruit, take up a small portion of one's budget. Many of us do not know the price of fruit and other items at the grocery store, much less if they have changed. Items that are a low portion of one's budget are relatively inelastic.
+
+Items that take up a large portion of one's budget are more elastic. Rent is typically a significant expense. If your rent is set to go up at the end of your lease, you are very aware of this. If it raises too much, you will look for a new place to live.
+
+**3. Time Elapsed Since Price Change*
+
+**
+
+When prices suddenly change people cannot always react. If gas suddenly doubled in price, people would still need to get to work and school. The demand would be inelastic. However, if gas stayed doubled in price people would make changes such as buying more fuel efficient or electric vehicles, moving closer to work, or voting for better public transportation. With these changes the quantity demanded would begin to decrease making demand more elastic as time goes by.
+
+\section{Total Revenue and Elasticity}\label{total-revenue-and-elasticity}
+
+The demand curve tells us the quantity demanded (purchased if available) at each price. This information allows us to also calculate total revenue as \textbf{total revenue} is price multiplied by the quantity. We can see how total revenue changes along the demand curve in the following graph.
+
+Total revenue both increases and decreases along this graph. Whether or not the total revenue will increase or decrease if price goes up is determined by the elasticity.
+
+If the demand is elastic, then a decrease in price will lead to a larger increase in quantity demanded. So even though price goes down, the quantity increases more so total revenue increases.
+
+If the demand is inelastic, then a decrease in price will has a smaller increase in demand. So total revenue will decrease.
+
+The graphs below show how the elasticity and total revenue change at the same time. Notice that the total revenue is highest when the elasticity is -1, or unit elastic.
+
+\chapter{Other Elasticities and Economic Surplus}\label{other-elasticities-and-economic-surplus}
+
+\section{Income Elasticity}\label{income-elasticity}
+
+Sometimes we may be interested in how changes in people's income will affect their demands for certain goods. In this case we will use \textbf{income elasticity of demand} instead of price elasticity. The formula is very similar.
+
+\(E_I = \frac{\% \Delta Q_D}{\% \Delta I}\)
+
+Where I is the income so that the formula reads, ``the income elasticity of demand is equal to the percentage change in quantity divided by the percentage change in income.''
+
+Income elasticity of demand can be either positive or negative. The sign of the income elasticity let's us know if the good is normal or inferior. Recall that a \textbf{normal good} is one that consumers demand more of as their income increases, so the income elasticity will be positive.
+An \textbf{inferior good} is one that consumers purchase less of as their income increases. This will result in the income elasticity being positive.
+
+\section{Cross-Price Elasticity of Demand}\label{cross-price-elasticity-of-demand}
+
+Cross price elasticity lets us know how much two goods are related to one another. It's formula is
+
+\(E_{AB} = \frac{\%\Delta Q_A}{\% \Delta P_B}\)
+
+and says that the cross price elasticity of good A related to good B is equal tot he percentage change in quantity demanded of good A divided by the percentage change in price of good B.
+
+Recall that \textbf{substitute goods} are replacements. If the price of Good B increases, then people will switch to purchasing A, or the quantity increases. So both term are positive resulting in a positive cross price elasticity. The larger the number, the better substitutes the goods are.
+
+\textbf{Complements goods} are ones purchased together. If the price of good B goes up, people will want less of both good A and good B. So while the denominator is positive, the numerator is negative. This results in a negative cross price elasticity. The larger the negative number is (closer to negative infinity) the more complementary the goods are.
+
+\section{Elasticity of Supply}\label{elasticity-of-supply}
+
+\section{Economic Surplus}\label{economic-surplus}
+
+Recall that a \emph{market surplus} occurred when the quantity supplied exceeded the quantity demanded. \textbf{Economic surplus} is different in that it is the sum of total benefits received by consumers and producers in the current market.
+
+\subsection{Consumer Surplus}\label{consumer-surplus}
+
+When looking at the demand curve, we observe the relationship between different quantities of a good or service and the price for those quantities. We can think of these prices as people's willingness to pay for different quantities of certain goods. Say that the most you would be willing to pay for a new jacket is \$150. For you to demand the jacket you must have the means and plan to purchase this jacket. So long as the price is at or below \$150 you will demand it. If the price goes above \$150 you no longer demand the jacket because you are not willing to pay the price. For this reason we will sometimes call the demand curve the \textbf{willingness-to-pay curve}. We also assume that, since people are rational, you will not spend \$150 on a jacket if you do not value its benefits at \$150. For this reason we will also sometimes refer to the demand curve as the \textbf{marginal benefits curve}.
+
+Now suppose you went to the store to purchase a new jacket, and the one you like is prices at \$120. You are willing to pay \$120 because it is less than the \$150 that you value it at. Because you value this jacket higher than the price you must pay, you get additional benefit called consumer surplus. \textbf{Consumer surplus} is the excess benefit of consuming a good or service beyond its market price. Your consumer surplus in this scenario is \$150 - \$120 = \$30.
+
+Now, you are not the only person purchasing jackets. All other people you value this jacket at \$120 or more will demand this jacket. Combining all of the individual demand for this good gives us the market demand for the good. By combining the consumer surplus of all the individuals in the market, we can calculate the total consumer surplus.
+
+When looking at demand graphically, consumer surplus is the total area between the demand curve and the market price, for the total quantity demanded. By changing the price on the graph below, you can see how the consumer surplus changes.
+
+\subsection{Producer Surplus}\label{producer-surplus}
+
+Just like you have value for things you purchase, firms and producers have value for the things they sell. Firms base their decisions to produce a specific quantity at different prices based on their costs. Suppose the firm that made the jacket above faces the cost of \$50 to make your jacket. Since the market price was \$120, they were willing to produce and sell the jacket. They would actually be willing to supply jackets for any price at or above \$50, because it will cover their costs and more. However, if the price is below \$50, then they will not supply jackets to the market because they would lose money. Because of this relationship we can think of the supply curve as the minimum-supply price curve, or the marginal cost curve. \textbf{Producer surplus} occurs when a firm is able to supply an item at a price greater than their marginal cost. In this case the firm earns \$120 - \$50 = \$70 in producer surplus.
+
+By adding all of the individual firms' supply curves, we get the market supply curve. By adding all of the individual producer surpluses at different quantities, we can the total producer surplus. Graphically, this is the area between the market price and supply curve for all quantities bought and sold in the market.
+
+By changing the price below, you can see how the producer surplus changes with price.
+
+\section{Market Efficiency}\label{market-efficiency}
+
+Combining producer surplus and consumer surplus gives us economic surplus. Recall that economic efficiency occurs when we cannot make one person better off without harming another. One concern of economics is market efficiency. We want to know if there are ways to improve markets that do not negatively affect people already participating in those markets.
+
+To analyze if markets are efficient, we can look at it in two ways. First, a market is efficient when \textbf{marginal social benefits equal marginal social costs}. I say social benefits and social costs, because sometimes there are benefits and costs of producing goods and services that affect other people, like pollution from factories. These are called externalities and will be discussed more in out study of Chapter 17. If the marginal social benefit is larger than the marginal social cost, then the market can produce more of a good and still have net positive to society. On the other hand, if the marginal social benefit is less than the marginal social costs then we can improve the net benefits to society by actually reducing production in the market. Once these social costs and benefits are the same, the market is efficient.
+
+When this efficiency occurs, another thing is true. The** total economic surplus is maximized**. If the market produces a quantity that is too small, there is a shortage. Both sides can gain surplus by increasing the quantity. Similarly if there is too much quantity produced, there is a surplus. Firms are charging a price that consumers are not willing to pay for the quantity. This means that firms are incurring costs for products that are not sold, which reduces their surplus. Similarly, if consumers may want the good, but must pay a price that they cannot afford, this reduces the consumer surplus. Reducing the quantity in the market will increase surplus for both producers and consumers.
+
+By changing the quantity below, you can visualize how the economic surplus changes if the price is fixed at the market price, and different quantities are produced.
+
+\subsection{Deadweight loss}\label{deadweight-loss}
+
+In the graph above there are two key things to notice. When the economic surplus (ES) is largest, consumer surplus and producer surplus are largest, and the supply equals demand. When the quantity is either two low or too high, the economic surplus (labeled ES) gets smaller. The difference between the largest economic surplus could be, and the amount it currently is, is deadweight loss. Or \textbf{Deadweight loss} is the loss of surplus do to \textbf{market failures} (inefficiencies. Deadweight loss is always the area between the current and efficient market quantities, and between the supply and demand curves. The graph below shades the deadweight loss from different quantities.
+
+\chapter{Taxes}\label{taxes}
+
+One of the government regulations that we see nearly every day of our lives is taxes. We pay sales tax when we by things at the store. We pay per gallon taxes on gasoline for our cars. You pay income tax when you get a paycheck. If you ever own a home, you will pay property taxes. A \textbf{tax }is an amount paid to the government when certain goods and services are purchased. Taxes can come in two forms. If you pay a percentage on the total amount of the purchase (like sales tax) we call it a \textbf{percent tax}. A tax of an exact amount for every item you purchase (like for gasoline) is a \textbf{flat tax}, or per-unit tax.
+
+When the government implements a tax, they can either put the tax on the consumer or on the producer. However, what we care about in economics is not the wording of the policy, but who ends up paying for the tax at the end of the day. Do the companies pass the tax of to the consumers or do they pay for it themselves? The split of tax between the producers and the consumers is what we call the \textbf{tax incidence}, or tax burden. The reason we do not care about who the tax is initially places on is because the tax incidence is the same for both.
+
+\subsection{A Tax on Consumers}\label{a-tax-on-consumers}
+
+The city of Seattle implemented a sugar tax in 2018 that charges \$0.0175 on every ounce of soda and other sugary beverages purchased. This amounts to a \$2.52 tax on a twelve pack of soda cans. We will start by analyzing the soda market before the tax.
+
+Suppose that the market for soda in Seattle without a tax followed the graph below, \textbf{and was an efficient market}. Quantity here is thousands of 12-packs of soda sold per month and price is in dollars.
+
+The current market equilibrium is a price of \$5 per 12-pack and 20,000 12-packs of soda sold per month.
+
+Placing the tax on the consumer means that when we purchase the good, we must give the tax to the government. In economics we think about this as either increasing the costs or reducing the benefits received by consumers. We show this by decreasing the demand curve by the amount of the tax.
+
+The point where the supply and demand with tax intersects gives us the new market quantity. We can see that this quantity is lower than the quantity without the tax.
+
+\subsection{Taxes as a price wedge}\label{taxes-as-a-price-wedge}
+
+Because consumers have to pay a tax when purchasing the good, the price they see, is not the final price they will pay. Consumers will pay the listed price for the good or service and then will pay the tax to the government on top of this. This means that the price for the consumer is different than the amount of money received by the producer.
+
+Even though the tax must be paid by consumers, the decrease in demand also affects the producers. Originally consumers paid \$5 and the producer received \$5. Now the consumer pay \$6.26 for the same good, but the producer only gets \$3.74. The groups who's price was changed the most is the group that bears the tax burden. Here the producers lose \$1.26 per 12 pack and the consumers pay an extra \$1.26 per 12 pack, so the split is the same.
+
+\subsection{Taxes and Market Efficiency}\label{taxes-and-market-efficiency}
+
+Because the tax moves the market away from equilibrium, we will see deadweight loss occur, and a decrease in economic surplus. When there are taxes, we also get government revenue. For every item that is purchased, the government is paid the tax amount. The graph below shows how the areas are affected by different tax amount.
+
+\subsection{A Tax on Producers}\label{a-tax-on-producers}
+
+A tax on producers means that after they receive payment from the consumer, they must give some of that payment to the government. We can think of the tax as increasing the cost to producers therefore reducing supply. We know that a reduction in supply reduced the equilibrium market quantity and raises the equilibrium price. Just like before the tax creates a difference in the final prices for the consumer and producers. The consumers pay the new higher equilibrium price, but the producer does not keep this amount. The producer must give the tax amount to the government and ultimately takes home a lower price. The graph below shows the same market for soda in Seattle with the tax placed on the producers. Notice that the equilibrium prices and quantities are same as when the tax was on the consumers.
+
+Since the resulting prices and quantities are the same, the tax burden is the same, as well as the effect on economic surplus and deadweight loss. By changing the tax below you can see how the affect on surplus is the same as when the tax was on consumers.
+
+\section{Elasticity and Who Pays the Tax}\label{elasticity-and-who-pays-the-tax}
+
+In the example above, the elasticity of demand was always equal to the elasticity of supply. This resulted in the effect of the tax being the same of producers and consumers. However, more often it is the case that there are different elasticities. Who ever has the least elastic curve, will end up paying for more of the tax. This is because if they are inelastic, then they will still purchase or sell the good even as prices change. The more elastic group is willing to stop buying or selling the product and so their price will be less effected. Move the demand curve on the graph below to see how the prices change as their demand is more and less elastic for the \$2.52 soda tax above.
+
+\section{Subsidies}\label{subsidies}
+
+Subsidies are the opposite of a tax. Instead of giving the government money, the government gives money to either consumers for purchasing a product, or to producers for making and selling a product. IF a subsidy is given to consumers, then they will receive additional benefit (increase their demand) for the product. This increases the market equilibrium quantity. Consumers will still pay producers a high price for the good or service, but after purchase they will get some of their money back through the subside, ultimately making the final price lower for consumers. If the market was efficient before the subsidy, then the additional production leads to deadweight loss.
+
+Similar to taxes, we can also subsidize the firms producing a good or service. Just like with taxes, the final market prices and quantities will be the same regardless of who the subsidy is given too. We will do a deeper dive into subsidies once we get to the chapter on externalities.
+
+\chapter{Price Controls}\label{price-controls}
+
+When the market equilibrium leads to a price that is considered too high or too low, the government will regulate the price. The government will either set a maximum price or a minimum price for a good or service in order to keep prices stable. Typically these price controls are implemented to correct \emph{market failures} (when the market equilibrium is not optimal for society), to make goods affordable for households, or to keep industries stable.
+
+\#\#Price Ceilings
+
+A \textbf{price ceiling} occurs when the government sets a maximum price that can be charged for a good or service. Examples include rent control, regulations on prices of emergency goods during natural disasters, and price caps on medication. For the price ceiling to be effective, it must be set lower than the current equilibrium price. If it is set above the equilibrium, then the market does not need to change it's price and can continue operating at equilibrium.
+Since the price is set below the market equilibrium, the quantity demanded will increase while the quantity supplied will decrease leading to shortage. Moving the price below will show how the market changes based on the price ceiling that is set.
+
+Because of the shortage, the market is limited by the quantity that is supplied. This lower quantity leads to a reduction of economic surplus, or deadweight loss. Because the price has been lowered, the producer and consumer surplus shift to this new price. Consumers will benefit the most from a price ceiling because they face lower prices for the same goods and services, and will capture some of the original producer surplus. Producers see the largest reduction in surplus, because they must now accept lower prices for their goods and services. The way that we find consumer and producer surplus are the same as before. The graph below shows how the consumer and producer surpluses change with the price ceiling.
+
+\section{Price Floors}\label{price-floors}
+
+\textbf{Price floors} occur when the government sets a minimum price that can be charged for a good or service. Examples of price floors include minimum wage, and minimum prices on agricultural products. For a price floor to be effective, it must be set above the market equilibrium price. If it is below, then the market is already above the government set minimum, so it does not need to react. Effective price floors encourage greater quantities supplied and lower quantities demanded, resulting in a surplus. The graph below shows effective price floors and the resulting changes in quantities supplied and demanded.
+
+Now, the market quantity is determined by quantity demanded. Again, these change in price and quantity will result in deadweight loss. Because consumers must purchase goods at higher prices, they will see a decrease in their consumer surplus. Producers will likely see an increase in producer surplus, because they can now charge a higher price for their goods and services. The areas of consumer surplus, producer surplus, and deadweight loss can be seen in the graph below.
+
+\chapter{Externalities}\label{externalities}
+
+When analyzing taxes, subsidies, price floors, and price ceilings before, we always assumed that the free market equilibrium was \emph{efficient}. Or, we assumed that the equilibrium was the point where marginal social benefits equaled marginal social costs.
+
+But, what happens when the demand curve does \textbf{not }accurately represent the marginal social benefit, or the supply curve does \textbf{not }accurately represent the marginal social cost? When this happens, the free market equilibrium is not efficient, or there is \textbf{market failure}. market failures can arise from a number of economic, political, and social issues. Examples of market failures are:
+
+\begin{itemize}
+\tightlist
+\item
+  Lack of clear property rights
+\item
+  Open Access
+\item
+  Public Goods
+\item
+  Providing for the future
+\item
+  Lobbying
+\item
+  Externalities
+\end{itemize}
+
+\textbf{Lack of clear property rights} occurs when there is no sole owner of a good, or if there is not way to enforce the ownership. For example, things like water flowing down a river, or the air around your home cannot be owned. Sure you can own a plot of land and that land may have a river, but once the water travels down stream or the wind blows, you no longer have the same water or air as before. This weakens the incentive to keep air or water clean because do not have to deal with it permanently. Clean laws on things like water and air rights help to correct for this.
+
+\textbf{Open access} goods are ones that are non-excludable, or we cannot keep people from using it. A common example of open access goods is fish. Red Snapper is a desirable fish that can be caught in the Gulf of Mexico. Because the fish sells for a decent price, fishermen are incentivized to catch lots of Red Snapper to make a profit. Anyone (with a fishing license and boat) can go out a fish for Red Snapper. Without restrictions, people would try to outdo their competition and would be incentivized to overfish the population. Due to this, the fishing industry is heavily regulated.
+
+\textbf{Public goods} are also non-excludable, but are also non-rivalrous, or the use of the good by one person, does not reduce the benefit others receive. Examples of public goods are, fire departments, K-12 education from public schools, and libraries. Everyone has access to these goods. Even if people never use these goods, they are always available for use. The economic problem with public goods, is that people are not incentive to help pay for public goods, because they can use them either way. We call these people \textbf{free-riders}. To fix the free-rider problem the goods listed above are funded heavily through taxes. Other public goods, like PBS and Wikipedia are funded heavily through donations and often struggle.
+
+\textbf{Providing for the future} leads to market failures because humans are not good at thinking long into the future. We tend to weight the importance of near choices more than choices in the distant future. When deciding how much oil to drill, or how much to reduce greenhouse gases, we are making decisions based on our preferences, knowledge, and technology today. We have no idea how future generations will view the world, or what the state of technology will be.
+Special interest groups use politics as a way to pass legislation that is more beneficial, regardless of if it will help the most people. The people who do this are called \textbf{lobbyists}.
+
+\textbf{Externalities} occur when a market transaction affects people or groups who were not involved in the transaction.
+
+\#\#Negative Externalities
+
+A \textbf{negative externality} occurs when there is a cost imposed on someone not involved in the consumption of production of the good. Common examples of negative externalities are pollution from factories and second-hand smoke from cigarette use.
+
+\section{Positive Externalities}\label{positive-externalities}
+
+A \textbf{positive externality} occurs when there is a benefit imposed on someone not involved in the consumption or production of the good. Common examples of positive externalities are the spillover of knowledge from education and the herd immunity that comes from vaccinations.
+
+\section{How Externalities Arise}\label{how-externalities-arise}
+
+Externalities occur when private and social interests do not align. The negative externality from pollution occurs because the businesses that operate the factory only take into account their private monetary costs when making production decisions, or their \textbf{marginal private costs}. (We will talk about how these decisions are made after midterm 2!) However the increased rate of heart and lung diseases from pollution impose costs on the individuals and the healthcare system. This is is the \textbf{marginal external cost}. The social cost of production is the cost to all parts of society, or the \textbf{marginal social cost} is the marginal private costs plus the marginal external costs.
+
+Externalities also arise if the private and social benefits do not align. When someone gets a vaccine, they are getting the \textbf{marginal private benefit} of immunity to the disease. However, health people getting vaccines prevents the spread of disease to the elderly, young, and immunocompromised. This is the \textbf{marginal external benefit}. The sum of the marginal private benefit and the marginal external benefit gives the \textbf{marginal social benefit}.
+
+We can think of the marginal social cost curve as the social supply curve, and we can think of the marginal social benefits curve as the social demand curve.
+
+When externalities arise, we can no longer rely on the free market to be efficient. We must have intervention to change the incentives of the firms and people in the economy. Ideal intervention will push the market equilibrium to reach the point where the \textbf{marginal social costs} and \textbf{marginal social benefits} are equal. Let us revisit the factors that can lead to market failures, and discuss how government intervention can help correct them.
+
+\textbf{1. Lack of Clear Property Rights}
+When property rights are not clearly defined, there is little incentive to take care of things. This is one of the many incentives for air and water pollution, as well as water diversion. Why does having clearly defined property rights help reduce these types of externalities?
+
+\textbf{Property rights} are legally established titles to the ownership, use, and disposal of factors of production and goods and services that are enforceable in courts. A simple example of property rights is if you own a car. When you purchase a car, it is your property. No one else is allowed to drive or enter your car without your permission. If someone takes your car without permission it is a crime and they will be arrested. Because there are clear property rights, many people choose to purchase cars.
+
+Now suppose that when you buy a car it is still yours, but if someone feels they need it more than you, they can just take it until they do not need it anymore. In other words there are not strong/clear property rights. You likely would not want to spend the thousands of dollars needed to buy a car that anyone could take at any moment. Additionally, you could always just take a car from someone else if you feel your need is greater. This would likely lead to a world where very few people purchase cars, and everyone would have to walk to work or school.
+
+It is easy to see that clear property rights help the car market (and all other markets) to be successful.
+
+\textbf{2. Open Access Goods}
+
+Open access goods tend to be overexploited without regulation. The most common example of open access goods being overexploited is the endangerment and extinction of fish species from overfishing. The reason open access goods are exploited is because there are no restrictions on who can use them. To reduce the overexploitation of open-access goods the government can choose to either restrict access, make access inconvenient, or a combination of both. The most common methods used are:
+
+\begin{itemize}
+\tightlist
+\item
+  Establishing property rights
+\item
+  Requiring licenses or fees for use
+\item
+  Setting limits on use
+\end{itemize}
+
+We have already discussed how property rights can be effective are reducing market failures.
+
+Requiring a license or fee to access a good is essentially increasing the price of the good. We know from the law of demand that if the price of something increases, the quantity demanded of the good will decrease, thus reducing overexploitation.
+
+Setting limits on use can come in a few different ways. The first is by setting certain times when the open access goods can and cannot be used. The second is by setting quotas or caps. Setting quotas limits the total amount of the good that can be used at any given time.
+
+\textbf{3. Public Goods}
+
+Because public goods are open to everyone, many people will use them without paying or supporting them. To help reduce this, many public goods are funded through taxes. One example is public education. Public education is able to remain free for all students because it is funded through taxes.
+
+\textbf{4. Externalities}
+
+There are a handful of ways to correct negative externalities, but the one we will focus on is through a tax. Recall, that a negative externality arises when the marginal private cost and marginal social cost are different. This result in too large of a quantity being produced. Back in week 4 we learned that taxes on efficient markets lead to reduced quantities causing deadweight loss.
+
+In markets with negative externalities we can use taxes to reduce the market quantity to the socially efficient point and actually eliminate the deadweight loss. The ideal tax is called a Pigouvian tax. A \textbf{Pigouvian tax} happens when we set the tax rate exactly equal to the amount of the marginal external cost.
+
+Positive externalities lead to underproduction of goods and services because the marginal private benefits and the marginal social benefits do not match. In order to incentivize increased production the government will often subsidize these industries. In week 4 we discussed how subsidies increase production and lead to overproduction when the market is efficient. When there are positive externalities, the subsidy pushes the production towards the socially optimal point to reduce deadweight loss and increase economic efficiency.
+
+\chapter{Short Run Costs and Production}\label{short-run-costs-and-production}
+
+\chapter{Long Run Costs and Perfect Competition}\label{long-run-costs-and-perfect-competition}
+
+\chapter{Competitive Equilibirum}\label{competitive-equilibirum}
+
+\chapter{Monopolies}\label{monopolies}
+
+\chapter{Monopolistic Competition}\label{monopolistic-competition}
+
+\chapter{Oligopoly and Strategy}\label{oligopoly-and-strategy}
+
+\bibliography{book.bib,packages.bib}
+
+\end{document}
