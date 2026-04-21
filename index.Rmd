@@ -19,8 +19,6 @@ github-repo: rstudio/bookdown-demo
 
 Welcome to **ECO 120: Principles of Microeconomics**. This book contains the reading and in class exercises for this class. You are expected to complete the reading assignments before each class so that you are ready to ask questions and discuss the content. The exercises will be completed together in class.
 
-While I, Dr. Wood, wrote the text, examples, and problems, I cannot take full authorial credit for this work. Much of the material for the readings and exercises are inspired or taken from a variety of other texts including, Economics by Michael Parkin, Principles of Economics by Dirk Mateer and Lee Coppock, and Principles of Economics by John B. Taylor and Akila Weerapana.
-
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
