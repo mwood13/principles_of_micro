@@ -1,8 +1,6 @@
 # Intro to Economics
 
-## Reading 1
-
-### What is Economics?
+## What is Economics?
 
 What do you think of when you hear the word economics? Many people think of "the economy" and more specifically how the stock market is preforming and how expensive things are, but economics is so much more than this. Some definitions of economics are given below. 
 
@@ -18,7 +16,7 @@ What do you think of when you hear the word economics? Many people think of "the
 
 A key difference in these definitions is the focus on decision making under scarcity and responses to incentives. **Scarcity** comes when we are unable to meet all out wants. Scarcity can come in the form of not having enough money to buy an item that you want, or it could be that you do not have enough time in the day to do all the activities you want. Because we face scarcity, we must decide how to allocate resources, energy, time, etc. People choose how to allocate scare items through incentives. **Incentives** are rewards that encourage a behavior or punishments that discourage a behavior. For example, if you have 2 hours of free time to either work on homework or hang out with your friends, you must choose which to do. You cannot spend 2 hours with your friends and 2 hours doing homework because you only have 2 hours of free time total. Right now you may choose to hang out with your friends because you enjoy spending time with your friends (large benefit), and there are not many assignments due in class yet (low costs). However, if you have a test tomorrow, then the cost of spending those two hours with your friends is much higher (cost is the loss of points on your test). In this case you may choose to allocate your scarce time differently because your incentives have changed. 
 
-### Two Branches of Economics
+## Two Branches of Economics
 
 Economics can be broken down into two main branches of study. 
 
@@ -69,35 +67,15 @@ When discussing the choice to work on homework or hang our with friends, we ment
 
  
 
-### Economics as a Social Science and Policy Tool
+## Economics as a Social Science and Policy Tool
 
 Economic research is done as a way to inform and critique policy. We make extensive use of facts and data to show how things in the world are or how a policy is working, and from this information we can make suggestions for new policy. Statements that declare facts and can be tested in economics research are **positive statements** while statements about how the world should be are **normative statements**. While it is tempting to start research or arguments with normative statements because you are passionate about a specific policy or topic, you cannot support your research or position without positive statements. 
 
-### Why Study Economics? 
+## Why Study Economics? 
 
 Economics is more than just understanding money and the "economy". Economics is a tool-set, a way of thinking, a way of approaching the world that is just a little bit different. Economics courses do so much more than teach you how to set a price for a product or how to interpret interest rates (although these are important). Economics teaches you to analyze all possibilities. It teaches you to think about the direct consequences of a decision as well as the indirect consequences. Economics teaches you to look beyond simple correlations in data, and to find the causes of relationship. Economics teaches you invaluable logic, reasoning, and critical thinking skill that can translate to all future careers as well as keep you marketable as an employee in a world surrounded by artificial intelligence. 
 
 Students with economics majors can go into a wide variety of fields including government work, entrepreneurship, law, finance, consulting, and business analytics. Economics majors also have some of the highest salaries and career stability outside of engineering and medical degrees.
 
 As artificial intelligence becomes more prevalent, job security is becoming uncertain in many sectors. Some economics jobs will also be affected by this. However, in this class we will focus on the tools required to make you all better prepared for the AI job market. You will focus on understanding the reasoning and logic behind arguments. You will learn how to critique and review AI output. You will also learn about writing AI prompts to give better results. The combination of computer skills and judgement is what make economics majors still highly desirable even as the job market changes. 
-
-## Exercises 1
-
-1. Which branch of economics would look at the effects of different degrees on wages? 
-
-2. Which branch of economics would look at the effects government spending on unemployment rates?
-
-3. What are some trade-offs of going to college?
-
-4. What is the largest trade-off of going to college?
-
-5. What are some trade-offs of taking a vacation to the beach?
-
-6. What is the largest trade-off of taking a vacation to the beach?
-
-## Reading 2
-
-### Graphs and Models in Economics
-
-## Exercises 2
 

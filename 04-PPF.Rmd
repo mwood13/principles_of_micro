@@ -1,13 +1,10 @@
 # Opportunity Costs
 
-## Reading 1
+## Production Possibility Frontiers
 
-### Production Possibility Frontiers
-
-Suppose you have 5 hours of free time tonight. You can choose to either study economics or watch tv. How many hours do you choose to spend watching tv? How many hours to you choose to spend studying economics? How might this choice change if it is a Saturday? What if you have an exam tomorrow? What if it is spring break
+Suppose you have 5 hours of free time tonight. You can choose to either study economics or watch tv. How many hours do you choose to spend watching tv? How many hours to you choose to spend studying economics? How might this choice change if it is a Saturday? What if you have an exam tomorrow? What if it is spring break?
 
 All the different possible ways for you to split your 5 hours between studying and watching tv makes up your **production possibility frontier**.
-
 
 ------------------------------------
  Hours Studying   Hours Watching TV
@@ -32,14 +29,14 @@ In an economic sense, the **production possibility frontier (PPF)** is the bound
 
 For your choice between studying economics and watching tv, your PPF would look like this.
 
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
+```{r setup, message=F, echo=F, warning=F}
 library(tidyverse, knitr)
 
-
+knitr::opts_chunk$set(message=F, echo=F, warning=F)
 ```
 
 
-```{r PPF Individual, echo=FALSE, message=FALSE, warning=FALSE}
+```{r PPF Individual}
 
 tv_hours <- c(0,1,2,3,4,5)
 study <- c(5,4,3,2,1,0)
@@ -59,7 +56,9 @@ ggplot(data=df, aes(x = tv_hours, y = study))+
 ```
 
 
-For most firms and governments, the production possibility is **non-linear,** or slightly curved. This is because of something called specialization, which we will talk about more next class. For this example let us suppose that the city of Atlanta can produce either Chick-fil-A sandwiches of packs of Coca-Cola. Some of the possible production points are in the table below.
+For most firms and governments, the production possibility is **non-linear,** or  curved. This is because of something called specialization. **Specialization** is when people, business, or countries choose to only produce the goods and services which they have the lowest opportunity cost of producing. 
+
+For this example let us suppose that the city of Atlanta can produce either Chick-fil-A sandwiches of packs of Coca-Cola. Some of the possible production points are in the table below.
 
 
 ------------------------------------------
@@ -107,11 +106,13 @@ ggplot(data=df2, aes(x = chicken, y = coke))+
 ```
 
 
-Depending on the combination of goods Atlanta wants to produce we can state if it is attainable, unattainable, efficient, or inefficient.
+Depending on the combination of goods Atlanta wants to produce we can state if it is possible or impossible, and if it is efficient or inefficient.
 
-A point of production is **attainable **if the combination of goods can be produced under current technological and resource constraints. A point is **unattainable **if it cannot be produced. A point is **inefficient**, if it can be improved, without having to give up anything. A point is **efficient **if it cannot be improved on. Move the point around on the graph below to see where it is attainable, unattainable, efficient, and inefficient.
+A point of production is **possible** if the combination of goods can be produced under current technological and resource constraints. A point is **impossible** if it cannot currently be produced. A point is **inefficient**, if it can be improved, without having to give up anything. A point is **efficient** if it cannot be improved on. 
 
-```{r unattainable, echo=F, message=FALSE}
+In the graph below, various points are labeled to show this concept. The point floating above the PPF is labeled as impossible. Any point that is above the PPF will be impossible. All points that are either on or below the the PPF are possible. Looking at the possible points, we can see that the point below the PPF is labeled as inefficient. This is because we are currently producing 2 million chicken sandwiches and 5 million packs of Coke. We could increase production of chicken sandwiches to 3 million, while continuing to produce 5 million cokes, thus make the point inefficient. The point on the PPF is labeled as efficient. This is because in order to increase production of chicken sandwiches, we would have to lower production of Coke. 
+
+```{r impossible, echo=F, message=FALSE}
 ggplot(data=df2, aes(x = chicken, y = coke))+
   geom_smooth(linewidth = 1, se=FALSE)+
   geom_point(size = 2)+
@@ -126,16 +127,13 @@ ggplot(data=df2, aes(x = chicken, y = coke))+
         panel.grid.minor = element_blank(),
         axis.text = element_text(size = 16))+
   annotate("point", x=2, y = 5)+
-  annotate("text", x = 2, y = 5.7, label="Attainable; Inefficient", size = 4)+
+  annotate("text", x = 2, y = 5.7, label="Possible; Inefficient", size = 4)+
   annotate("point", x = 4, y = 12)+
-  annotate("text", x = 4, y = 12.7, label="Unattainable", size = 4)+
-  annotate("text", x = 3.6, y = 9.5, label="Attainable; Efficient", size = 4)
+  annotate("text", x = 4, y = 12.7, label="Impossible", size = 4)+
+  annotate("text", x = 3.6, y = 9.5, label="Possible; Efficient", size = 4)
 ```
 
-
-Notice that when the point is above the PPF, it is unattainable. When it is below the PPF it is attainable, but it is inefficient.&nbsp; It is inefficient, because we could make more of either one or both of out product, without having to make less of the other. The production is only efficient and attainable when it is *on the PPF*. At this point we cannot make more of one product without reducing production of the other.
-
-### Opportunity and Marginal Cost
+## Opportunity and Marginal Costs
 
 Suppose we currently only produce Coca-Cola in Atlanta and produced 15 million packs of Coke per year, what would we have to give up in order to produce chicken sandwiches? We would give up packs of Coke. The cost of coke given up divided by the benefit of chicken sandwiches gained, gives us our **opportunity cost**. The cost of coke given up to produce one more chicken sandwich is the **marginal cost**.
 
@@ -181,7 +179,7 @@ In order to go from no chicken sandwich production to 1 million chicken sandwich
 Table: Opportunity Costs of Producing More Sandwiches
 
 
-Notice the column "Midpoint of Sandwiches". Because the PPF is curved, the slope between 1 and 2 chicken sandwiches is not a straight line. This also means that the opportunity cost between these two points is not constant at 2 packs of coke, but rather is also moving. Instead, the opportunity cost that we calculated is the opportunity cost between 1 and 2 million chicken sandwiches. So we know that the opportunity cost halfway between 1 and 2 million sandwiches (the midpoint) is 2 packs of coke.
+Notice the column "Midpoint of Sandwiches". Because the PPF is curved, the slope between 1 and 2 chicken sandwiches is not staying the same the whole time. This also means that the opportunity cost between these two points is not constant, but rather is also changing. Instead, the opportunity cost that we calculated is the opportunity cost between 1 and 2 million chicken sandwiches. So we know that the opportunity cost halfway between 1 and 2 million sandwiches (the midpoint) is 2 packs of coke.
 
 Midpoint Formula = (sum of two points)/2
 
@@ -202,64 +200,240 @@ ggplot(data=df, aes(x = chicken, y = coke))+
         axis.text = element_text(size = 16))
 ```
 
-## Exercises 1
+### Increasing Opportunity Costs
 
-## Reading 2
+Looking at both the PPF and the table of opportunity costs, we can see that as the production of chicken sandwiches increases, the production of Coke must decrease by a larger amount each time. This shows the principle of **increasing opportunity cost**. 
 
-### Using Resources Efficiently
-Above we saw that we can produce at any point on our PPF and it is efficient. Specifically that point is **productively efficient**. However, we have not determined which of the infinite options on the PPF is the point we should actually choose to operate at. The optimal point is the one that most efficiently *allocates our resources*. Specifically we are looking for the point of **allocative efficiency**: the point where goods and services are produced at the *lowest possible cost* and in the quantities that provide the *greatest possible benefit*. We found the cost of producing more chicken sandwiches in terms of packs of Coke in the table above. If we also know the additional benefit, or the amount of Coke's consumers are willing to give up in order to purchase more chicken sandwiches, we can determine the point of allocative efficiency.
+Why is increasing opportunity costs a thing? Why aren't production possibility frontiers linear? Simply put, because some resources are better utilized for producing Coke than Chick-fil-A sandwiches. Let us think about a city of Atlanta that only produces Coca-Cola. This means that all workers, trucks, and land is being utilized for Coke production. Now consider what needs to happen to produce the first 1 million chicken sandwiches. We will need some land for the restaurants, we will need workers, and we will need trucks for inventory distribution. It would likely be that the workers that initially move to Chick-fil-A are better suited for the restaurant industry. They may be good at cooking or prefer to work with people. We can also produce chicken sandwiches in smaller kitchens meaning that we do not need large factory spaces or distribution centers. Ultimately, the industries are quite different from one another, so the initial impact to Coca-Cola is quite small. 
 
-Suppose that the marginal benefits of a chicken sandwich (The amount of Coke consumers are willing to give up to receive one more sandwich) are what is in the table below.
+As we increase production of chicken sandwiches and reduce production of Coke, more people and resources that are better suited to work at Coca Cola will end up having to be used for Chick-fil-A sandwiches. At this point, you have to more much more resources and people to have the same increases, because they are not as well suited for their new task. 
 
-----------------------------------------------------
- Quantity of     Marginal Cost    Marginal Benefit
-  Sandwiches     in Cokes         in Cokes
--------------- ---------------- --------------------
- 0.5            1                5
- 
- 1.5            2                4
- 
- 2.5            3                3
- 
- 3.5            4                2
- 
- 4.5            5                1
-----------------------------------------------------
 
-Table: Marginal Costs and Benefits of More
-Sandwiches
+## Increasing Prouction Possibilities
 
-If we chose to produce 0.5 Chicken sandwiches, the marginal costs are the lowest and the marginal benefits are the highest. But remember Marginal is not total, it is only the amount for the very next unit. We want the lowest total costs and highest total benefits. The rule is that if marginal benefit is *greater* than marginal cost, then more production improves the efficiency. If the marginal benefit is* less* than marginal cost, then production should reduce to improve efficiency. The point where we do not want to increase or decrease production is when marginal benefit and marginal costs are **equal**. The point of allocative efficiency is 2.5 million chicken sandwiches because the marginal cost and marginal benefit are both 3.
-We can also graph the marginal costs and marginal benefit curves to help visualize the point of allocative efficiency. Graphically it is the point where the curves intersect.
+Because technology, the number of people working, and even the number of building and factories are increasing, the production possibility frontier can also increase. 
 
-```{r allocaton, echo=F, message = F}
-q <- seq(0.5, 4.5, 1)
-mc <- seq(1, 5, 1)
-mb <- c(5,4,3,2,1)
+Suppose that Coca-Cola comes out with a new canning process that allows them to make packs of Coke much faster than before. This will increase the total combination of both Coke and Sandwiches that can be produced. However, since this does not change the production of chicken sandwiches, the maximum if we only produced chicken sandwiches is still 5 million as seen in the graph below. 
 
-df3 <- tibble(q, mb, mc)
+```{r}
 
-ggplot(data = df3)+
-  geom_line(aes(x = q, y = mb), color = "blue3", linewidth = 1)+
-  geom_line(aes(x = q, y = mc), color = "red3", linewidth = 1)+
-  geom_point(aes(x = q, y = mb), size = 2, color = "blue3")+
-  geom_point(aes(x = q, y = mc), size = 2, color = "red3")+
+df$new_coke = 1.5*coke
+
+ggplot(data=df,)+
+  geom_smooth( aes(x = chicken, y = coke),linewidth = 1, se=FALSE)+
+  geom_smooth(aes(x = chicken, y = new_coke), linewidth = 1,
+              se = F, linetype = 2)+
   theme_minimal()+
   geom_vline(xintercept = 0)+
   geom_hline(yintercept = 0)+
-  labs(x = "Quantity of Sandwiches", y = "Price in Cokes",
-       title ="Costs and Benefits of Chicken Sandwiches")+
-  scale_x_continuous(breaks = seq(0.5,4.5,1), limit = c(0,5))+
-  scale_y_continuous(breaks = seq(0,5,1), limit = c(0, 5.5))+
+  labs(x = "Chicken Sandwiches (Millions)", y = "Packs of Coke (Millions)",
+       title ="Production Possibility Frontier of Atlanta",
+       subtitle = "Dashed line shows new PPF")+
+  theme(text = element_text(size = 18),
+        panel.grid.minor = element_blank(),
+        axis.text = element_text(size = 16))
+```
+
+Now let us suppose that at the same time, Chick-fil-A expanded the number of stores in the city. This would allow them to produce and serve more chicken sandwiches. This would shift the production possibility frontier out for both products. 
+
+```{r}
+
+df$new_chicken = 1.5*chicken
+
+ggplot(data=df,)+
+  geom_smooth( aes(x = chicken, y = coke),linewidth = 1, se=FALSE)+
+  geom_smooth(aes(x = new_chicken, y = new_coke), linewidth = 1,
+              se = F, linetype = 2, color = "red")+
+  theme_minimal()+
+  geom_vline(xintercept = 0)+
+  geom_hline(yintercept = 0)+
+  labs(x = "Chicken Sandwiches (Millions)", y = "Packs of Coke (Millions)",
+       title ="Production Possibility Frontier of Atlanta",
+       subtitle = "Dashed line shows new PPF")+
+  theme(text = element_text(size = 18),
+        panel.grid.minor = element_blank(),
+        axis.text = element_text(size = 16))
+```
+
+## Gains from Trade
+
+### Production Advantages
+
+Let us look at the countries of China and Indonesia. Both countries are large producers of rice and tea. Currently China is the 2nd largest producer of rice and the largest producer of tea. Indonesia is the world's 4th largest producer of rice and 7th largest producer of tea. Let us assume that their production possibilities are as given below:
+
+-----------------------------
+ Rice in tons    Tea in tons
+-------------- --------------
+ 0              25.5
+ 
+ 51             0
+-----------------------------
+
+Table:  Production 
+possibilities for China.
+
+-----------------------------
+ Rice in tons   Tea in Tons
+-------------- --------------
+ 0               4
+ 
+ 36              0
+-----------------------------
+
+Table: Production 
+possibilities for Indonesia
+
+Plotting each countries production possibility frontiers looks like this.
+
+```{r setup trade
+}
+
+china_rice <- c(0,51)
+china_tea <- c(25.5, 0)
+
+indonesia_rice <- c(0,36)
+indonesia_tea <- c(4,0)
+```
+
+```{r indPPF, echo=F}
+ggplot()+
+  geom_line(aes(x = china_rice, y = china_tea), color = "blue3", linewidth = 1)+
+  geom_line(aes(x = indonesia_rice, y = indonesia_tea),
+            color = "red3", linewidth = 1)+
+  geom_point(aes(x = china_rice, y = china_tea), size = 2, color = "blue3")+
+  geom_point(aes(x = indonesia_rice, y = indonesia_tea),
+             size = 2, color = "red3")+
+  theme_minimal()+
+  geom_vline(xintercept = 0)+
+  geom_hline(yintercept = 0)+
+  labs(x = "Tons of Rice", y = "Tons of Tea",
+       title ="PPFs for China and Indonesia")+
+  scale_x_continuous(breaks = c(0,36,51), limit = c(0,55))+
+  scale_y_continuous(breaks = c(0,4, 25.5), limit = c(0, 30))+
   theme(text = element_text(size = 18),
         panel.grid.minor = element_blank(),
         axis.text = element_text(size = 16))+
-  annotate("text", x = 4.75, y = 1, label ="Maginal\nBenefit")+
-  annotate("text", x = 4.75, y = 5.1, label = "Marginal\nCost")+
-  annotate("segment", x = 2.5, y = 0,
-        xend = 2.5, yend = 3, linetype = 2)+
-  annotate("segment", x = 0, y = 3, 
-           xend = 2.5, yend = 3, linetype = 2)
+  annotate("text", x = 51.5, y = 1.5, label ="China")+
+  annotate("text", x = 36, y = 1.5, label = "Indonesia")
 ```
 
-## Exercises 2
+
+
+We can quickly see that if both countries were to only produce rice, that China would produce more than Indonesia. This means that China has an **absolute advantage** in rice production. Similarly, China has the absolute advantage in tea production, because if both countries put all of their resources into tea, China would produce more?
+
+So why would China be interested in trading with Indonesia, if they are better at producing both goods? Because of **opportunity cost**.
+
+A country, person, or business has the **comparative advantage** in producing a good or service if they are able to produce it at the lowest opportunity cost.
+
+**What is the opportunity cost of growing rice?**
+
+In order for China to grow rice, it must produce less tea. Their opportunity cost is $\frac{25.5}{51} = 0.5$. China must give up 0.5 tons of tea in order to grow 1 ton of rice. Similarly, Indonesia's opportunity cost is $\frac{4}{39} \approx 0.11$. Because Indonesia's opportunity cost of growing rice is less than China's, Indonesia has the comparative advantage.
+
+**What is the opportunity cost of growing tea?**
+
+In order for China to grow tea, they must grow less rice. China's opportunity cost of growing tea is $\frac{51}{25.5} = 2$. Indonesia's opportunity cost is $\frac{36}{4} = 9$. So, China has the lowest opportunity cost and the comparative advantage in tea production.
+
+### Specialization
+
+Most countries of the world do not produce every single good and service possible, but rather produce some and then trade for the rest with other countries. They choose to produce the goods and services for which they have the comparative advantage. The act of only producing those goods and services for which a country or firm has the comparative advantage is called **specialization**. In our scenario, China should specialize in tea. This means China makes 25.5 tons of tea and 0 tons of rice. Indonesia should specialize in rice making 0 tons of tea and 36 tons of rice.
+
+Graphically, we can see their production points. China produces at the large point on the China PPF, and Indonesia produces at the large point on the Indonesia PPF.
+
+```{r specialize, echo=F}
+ggplot()+
+  geom_line(aes(x = china_rice, y = china_tea), color = "blue3", linewidth = 1)+
+  geom_line(aes(x = indonesia_rice, y = indonesia_tea),
+            color = "red3", linewidth = 1)+
+  theme_minimal()+
+  geom_vline(xintercept = 0)+
+  geom_hline(yintercept = 0)+
+  labs(x = "Tons of Rice", y = "Tons of Tea",
+       title ="PPFs for China and Indonesia")+
+  scale_x_continuous(breaks = c(0,36,51), limit = c(0,55))+
+  scale_y_continuous(breaks = c(0,4, 25.5), limit = c(0, 30))+
+  theme(text = element_text(size = 18),
+        panel.grid.minor = element_blank(),
+        axis.text = element_text(size = 16))+
+  annotate("text", x = 51.5, y = 1.5, label ="China")+
+  annotate("text", x = 36, y = 1.5, label = "Indonesia")+
+  annotate("point", x = 36, y = 0, size = 4, color = "red3")+
+  annotate("point", x = 0, y = 25.5, size = 4, color = "blue3")
+```
+
+
+### Trade
+
+Once countries have specialized, they trade with countries that have other specialties.
+
+Because China must give up 0.5 a ton of tea to grow rice, they are willing to purchase rice from others if the price is less than 0.5 tons of tea. If the price is higher then they will just produce it themselves.
+
+Similarly, Indonesia's opportunity cost of growing rice is 0.11. If they can sell for a price greater than this, they will.
+
+This disparity in opportunity costs is what makes trade advantageous for both countries even though China has the absolute advantage in production.
+Suppose that China agrees to purchase 25 tons of rice from Indonesia at a price of 0.2 tons of tea per ton of rice. This means that China will give Indonesia 25*0.2 = 5 tons of tea.
+
+China will end with 25.5 - 5 = 20.5 tons of tea and 0 + 25 = 25 tons of rice.
+
+Indonesia will end with 0 + 5 = 5 tons of tea and 36 - 25 = 11 tons of rice.
+
+Plotting these points shows us more clearly how both countries end up better off from trade. The amounts of rice and tea for China after trade is seen at point C2, and for Indonesia at point I2.
+
+```{r trade, echo=F}
+ggplot()+
+  geom_line(aes(x = china_rice, y = china_tea), color = "blue3", linewidth = 1)+
+  geom_line(aes(x = indonesia_rice, y = indonesia_tea),
+            color = "red3", linewidth = 1)+
+  theme_minimal()+
+  geom_vline(xintercept = 0)+
+  geom_hline(yintercept = 0)+
+  labs(x = "Tons of Rice", y = "Tons of Tea",
+       title ="PPFs for China and Indonesia")+
+  scale_x_continuous(breaks = c(0,11,25,36,51), limit = c(0,55))+
+  scale_y_continuous(breaks = c(0,4,4,20.5, 25.5), limit = c(0, 30))+
+  theme(text = element_text(size = 18),
+        panel.grid.minor = element_blank(),
+        axis.text = element_text(size = 16))+
+  annotate("text", x = 51.5, y = 1.5, label ="China")+
+  annotate("text", x = 36, y = 1.5, label = "Indonesia")+
+  annotate("point", x = 36, y = 0, size = 4, color = "red3")+
+  annotate("point", x = 0, y = 25.5, size = 4, color = "blue3")+
+  annotate("point", x = 11, y = 5, size = 4, color = "red3")+
+  annotate("text", x = 12, y = 7, label = "I2")+
+  annotate("point", x = 25, y = 20.5, size = 4, color = "blue3")+
+  annotate("text", x = 26, y = 22, label = "C2")
+```
+
+
+By connecting the points before and after trade for each country, we get their trade line. The trade line shows us the different combinations that the countries could land at after trading different quantities.
+
+```{r trade_lines, echo=F}
+ggplot()+
+  geom_line(aes(x = china_rice, y = china_tea), color = "blue3", linewidth = 1)+
+  geom_line(aes(x = indonesia_rice, y = indonesia_tea),
+            color = "red3", linewidth = 1)+
+  theme_minimal()+
+  geom_vline(xintercept = 0)+
+  geom_hline(yintercept = 0)+
+  labs(x = "Tons of Rice", y = "Tons of Tea",
+       title ="PPFs for China and Indonesia")+
+  scale_x_continuous(breaks = c(0,11,25,36,51), limit = c(0,55))+
+  scale_y_continuous(breaks = c(0,4,20.5, 25.5), limit = c(0, 30))+
+  theme(text = element_text(size = 18),
+        panel.grid.minor = element_blank(),
+        axis.text = element_text(size = 16))+
+  annotate("text", x = 51.5, y = 1.5, label ="China")+
+  annotate("text", x = 36, y = 1.5, label = "Indonesia")+
+  annotate("point", x = 36, y = 0, size = 4, color = "red3")+
+  annotate("point", x = 0, y = 25.5, size = 4, color = "blue3")+
+  annotate("point", x = 11, y = 5, size = 4, color = "red3")+
+  annotate("point", x = 25, y = 20.5, size = 4, color = "blue3")+
+  annotate("segment", x = 36, y = 0, xend = 11, yend = 5,
+           linetype = 2, color = "red3")+
+  annotate("segment", x =0, y = 25.5, xend = 25, yend = 20.5,
+           linetype = 2, color = "blue3")
+```
+
+
+### Unattainable Individually but Efficient Globally
+
+Through trade, China and Indonesia are able to reach points beyond their PPF's. Alone these points would be unattainable. Through trade, the combined production of all countries allows us to reach efficient production on the economic (or global) PPF.

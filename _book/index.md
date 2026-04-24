@@ -1,7 +1,7 @@
 --- 
 title: "Principles of Microeconomics"
 author: "Dr. Micaela Wood"
-date: "2026-04-21"
+date: "2026-04-24"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
