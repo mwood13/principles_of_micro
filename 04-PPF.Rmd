@@ -285,8 +285,7 @@ possibilities for Indonesia
 
 Plotting each countries production possibility frontiers looks like this.
 
-```{r setup trade
-}
+```{r setup trade}
 
 china_rice <- c(0,51)
 china_tea <- c(25.5, 0)

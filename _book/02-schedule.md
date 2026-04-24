@@ -9,8 +9,8 @@
          
   2      Opportunity Costs and PPFs          WA 1
          
-  3      Gains from Trade and                              Labor Day
-         Demand                                            No Class Monday 9/7
+  3      Demand                                            Labor Day
+                                                           No Class Monday 9/7
          
   4      Supply and Equilibrium              WA 2
          
